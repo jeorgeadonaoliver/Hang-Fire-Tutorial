@@ -1,0 +1,646 @@
+2025-07-08 13:45:31.545 +08:00 [INF] Start installing Hangfire SQL objects...
+2025-07-08 13:45:32.744 +08:00 [INF] Hangfire SQL objects installed.
+2025-07-08 13:45:33.044 +08:00 [INF] Now listening on: https://localhost:7032
+2025-07-08 13:45:33.045 +08:00 [INF] Now listening on: http://localhost:5062
+2025-07-08 13:45:33.123 +08:00 [INF] Starting Hangfire Server using job storage: 'SQL Server: JEORGEOLIVER-LA\SQLEXPRESS02@HangfireDb'
+2025-07-08 13:45:33.124 +08:00 [INF] Using the following options for SQL Server job storage: Queue poll interval: 00:00:00.
+2025-07-08 13:45:33.125 +08:00 [INF] Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15
+2025-07-08 13:45:33.168 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-07-08 13:45:33.175 +08:00 [INF] Hosting environment: Development
+2025-07-08 13:45:33.176 +08:00 [INF] Content root path: C:\Users\Jeorge Oliver\source\repos\Hang-Fire.Api
+2025-07-08 13:45:33.274 +08:00 [INF] Server jeorgeoliver-la:21340:8c0dbdf9 successfully announced in 106.5587 ms
+2025-07-08 13:45:33.280 +08:00 [INF] Server jeorgeoliver-la:21340:8c0dbdf9 is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, SqlServerHeartbeatProcess, ExpirationManager, CountersAggregator, Worker, DelayedJobScheduler, RecurringJobScheduler...
+2025-07-08 13:45:33.308 +08:00 [INF] 1 servers were removed due to timeout
+2025-07-08 13:45:33.371 +08:00 [INF] Server jeorgeoliver-la:21340:8c0dbdf9 all the dispatchers started
+2025-07-08 13:45:34.206 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7032/swagger/index.html - null null
+2025-07-08 13:45:34.337 +08:00 [INF] HTTP GET /swagger/index.html responded 200 in 84.6613 ms
+2025-07-08 13:45:34.344 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7032/_framework/aspnetcore-browser-refresh.js - null null
+2025-07-08 13:45:34.348 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7032/swagger/index.html - 200 null text/html;charset=utf-8 150.2448ms
+2025-07-08 13:45:34.366 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7032/_framework/aspnetcore-browser-refresh.js - 200 13762 application/javascript; charset=utf-8 22.4633ms
+2025-07-08 13:45:34.417 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7032/swagger/v1/swagger.json - null null
+2025-07-08 13:45:34.428 +08:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 6.9675 ms
+2025-07-08 13:45:34.430 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7032/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 12.9222ms
+2025-07-08 13:45:39.903 +08:00 [INF] Request starting HTTP/2 POST https://localhost:7032/api/Applicant/CreateApplicant - application/json 152
+2025-07-08 13:45:39.912 +08:00 [INF] Executing endpoint 'Hang_Fire.Api.Controllers.ApplicantController.CreateApplicant (Hang-Fire.Api)'
+2025-07-08 13:45:39.935 +08:00 [INF] Route matched with {action = "CreateApplicant", controller = "Applicant"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateApplicant(Hang_Fire.Application.Features.Applicants.Command.CreateApplicant.CreateApplicantCommand, System.Threading.CancellationToken) on controller Hang_Fire.Api.Controllers.ApplicantController (Hang-Fire.Api).
+2025-07-08 13:45:39.939 +08:00 [WRN] You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2025-07-08 13:45:40.044 +08:00 [INF] Executing action method Hang_Fire.Api.Controllers.ApplicantController.CreateApplicant (Hang-Fire.Api) - Validation state: "Valid"
+2025-07-08 13:45:41.598 +08:00 [INF] Executed DbCommand (17ms) [Parameters=[@__email_0='?' (Size = 255)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Applicant] AS [a]
+        WHERE [a].[Email] = @__email_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-07-08 13:45:44.983 +08:00 [INF] Validation failed for CreateApplicantCommand: Invalid email format!
+2025-07-08 13:45:44.987 +08:00 [ERR] Throw BadRequest Exception: Error with Message='Invalid email format!'
+2025-07-08 13:45:44.991 +08:00 [INF] Executed action method Hang_Fire.Api.Controllers.ApplicantController.CreateApplicant (Hang-Fire.Api), returned result Microsoft.AspNetCore.Mvc.BadRequestObjectResult in 4942.7411ms.
+2025-07-08 13:45:44.998 +08:00 [INF] Executing BadRequestObjectResult, writing value of type 'System.String'.
+2025-07-08 13:45:45.002 +08:00 [INF] Executed action Hang_Fire.Api.Controllers.ApplicantController.CreateApplicant (Hang-Fire.Api) in 5063.8161ms
+2025-07-08 13:45:45.004 +08:00 [INF] Executed endpoint 'Hang_Fire.Api.Controllers.ApplicantController.CreateApplicant (Hang-Fire.Api)'
+2025-07-08 13:45:45.006 +08:00 [INF] HTTP POST /api/Applicant/CreateApplicant responded 400 in 5097.0363 ms
+2025-07-08 13:45:45.013 +08:00 [INF] Request finished HTTP/2 POST https://localhost:7032/api/Applicant/CreateApplicant - 400 null text/plain; charset=utf-8 5110.3102ms
+2025-07-08 13:48:00.826 +08:00 [INF] Start installing Hangfire SQL objects...
+2025-07-08 13:48:02.515 +08:00 [INF] Hangfire SQL objects installed.
+2025-07-08 13:48:02.842 +08:00 [INF] Now listening on: https://localhost:7032
+2025-07-08 13:48:02.844 +08:00 [INF] Now listening on: http://localhost:5062
+2025-07-08 13:48:02.924 +08:00 [INF] Starting Hangfire Server using job storage: 'SQL Server: JEORGEOLIVER-LA\SQLEXPRESS02@HangfireDb'
+2025-07-08 13:48:02.925 +08:00 [INF] Using the following options for SQL Server job storage: Queue poll interval: 00:00:00.
+2025-07-08 13:48:02.926 +08:00 [INF] Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15
+2025-07-08 13:48:02.977 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-07-08 13:48:02.984 +08:00 [INF] Hosting environment: Development
+2025-07-08 13:48:02.985 +08:00 [INF] Content root path: C:\Users\Jeorge Oliver\source\repos\Hang-Fire.Api
+2025-07-08 13:48:03.073 +08:00 [INF] Server jeorgeoliver-la:27480:facd7ffb successfully announced in 97.3188 ms
+2025-07-08 13:48:03.079 +08:00 [INF] Server jeorgeoliver-la:27480:facd7ffb is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, SqlServerHeartbeatProcess, ExpirationManager, CountersAggregator, Worker, DelayedJobScheduler, RecurringJobScheduler...
+2025-07-08 13:48:03.184 +08:00 [INF] Server jeorgeoliver-la:27480:facd7ffb all the dispatchers started
+2025-07-08 13:48:03.618 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7032/swagger/index.html - null null
+2025-07-08 13:48:03.741 +08:00 [INF] HTTP GET /swagger/index.html responded 200 in 82.7369 ms
+2025-07-08 13:48:03.747 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7032/swagger/index.html - 200 null text/html;charset=utf-8 136.7869ms
+2025-07-08 13:48:03.751 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7032/_framework/aspnetcore-browser-refresh.js - null null
+2025-07-08 13:48:03.763 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7032/_framework/aspnetcore-browser-refresh.js - 200 13762 application/javascript; charset=utf-8 11.1169ms
+2025-07-08 13:48:03.823 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7032/swagger/v1/swagger.json - null null
+2025-07-08 13:48:03.832 +08:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 5.6167 ms
+2025-07-08 13:48:03.834 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7032/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 11.483ms
+2025-07-08 13:53:03.118 +08:00 [INF] 2 servers were removed due to timeout
+2025-07-08 13:53:17.607 +08:00 [INF] Request starting HTTP/2 POST https://localhost:7032/api/Applicant/CreateApplicant - application/json 180
+2025-07-08 13:53:17.623 +08:00 [INF] Executing endpoint 'Hang_Fire.Api.Controllers.ApplicantController.CreateApplicant (Hang-Fire.Api)'
+2025-07-08 13:53:17.644 +08:00 [INF] Route matched with {action = "CreateApplicant", controller = "Applicant"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateApplicant(Hang_Fire.Application.Features.Applicants.Command.CreateApplicant.CreateApplicantCommand, System.Threading.CancellationToken) on controller Hang_Fire.Api.Controllers.ApplicantController (Hang-Fire.Api).
+2025-07-08 13:53:17.648 +08:00 [WRN] You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2025-07-08 13:53:17.740 +08:00 [INF] Executing action method Hang_Fire.Api.Controllers.ApplicantController.CreateApplicant (Hang-Fire.Api) - Validation state: "Valid"
+2025-07-08 13:53:19.279 +08:00 [INF] Executed DbCommand (12ms) [Parameters=[@__email_0='?' (Size = 255)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Applicant] AS [a]
+        WHERE [a].[Email] = @__email_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-07-08 13:53:20.589 +08:00 [INF] Executed DbCommand (9ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (Size = 255), @p2='?' (Size = 100), @p3='?' (Size = 100), @p4='?' (Size = 100)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Applicant] ([Id], [Email], [FirstName], [LastName], [PositionApplying])
+VALUES (@p0, @p1, @p2, @p3, @p4);
+2025-07-08 13:53:20.724 +08:00 [INF] Background job to send email to delasalasjoby@gmail.com has been enqueued.
+2025-07-08 13:53:20.726 +08:00 [INF] Applicant Joboy, Delas Alas created successfully.
+2025-07-08 13:53:20.727 +08:00 [INF] HttpPost(CreateApplicant) connection successfully.
+2025-07-08 13:53:20.734 +08:00 [INF] Executed action method Hang_Fire.Api.Controllers.ApplicantController.CreateApplicant (Hang-Fire.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 2988.2084ms.
+2025-07-08 13:53:20.754 +08:00 [INF] Executing OkObjectResult, writing value of type 'System.Guid'.
+2025-07-08 13:53:20.765 +08:00 [INF] Executed action Hang_Fire.Api.Controllers.ApplicantController.CreateApplicant (Hang-Fire.Api) in 3116.0045ms
+2025-07-08 13:53:20.767 +08:00 [INF] Executed endpoint 'Hang_Fire.Api.Controllers.ApplicantController.CreateApplicant (Hang-Fire.Api)'
+2025-07-08 13:53:20.770 +08:00 [INF] HTTP POST /api/Applicant/CreateApplicant responded 200 in 3150.3914 ms
+2025-07-08 13:53:20.781 +08:00 [INF] Request finished HTTP/2 POST https://localhost:7032/api/Applicant/CreateApplicant - 200 null application/json; charset=utf-8 3173.7058ms
+2025-07-08 14:57:32.274 +08:00 [INF] Start installing Hangfire SQL objects...
+2025-07-08 14:57:34.633 +08:00 [INF] Hangfire SQL objects installed.
+2025-07-08 14:57:35.193 +08:00 [INF] Now listening on: https://localhost:7032
+2025-07-08 14:57:35.195 +08:00 [INF] Now listening on: http://localhost:5062
+2025-07-08 14:57:35.298 +08:00 [INF] Starting Hangfire Server using job storage: 'SQL Server: JEORGEOLIVER-LA\SQLEXPRESS02@HangfireDb'
+2025-07-08 14:57:35.301 +08:00 [INF] Using the following options for SQL Server job storage: Queue poll interval: 00:00:00.
+2025-07-08 14:57:35.302 +08:00 [INF] Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15
+2025-07-08 14:57:35.365 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-07-08 14:57:35.367 +08:00 [INF] Hosting environment: Development
+2025-07-08 14:57:35.368 +08:00 [INF] Content root path: C:\Users\Jeorge Oliver\source\repos\Hang-Fire.Api
+2025-07-08 14:57:35.617 +08:00 [INF] Server jeorgeoliver-la:37460:68f49c58 successfully announced in 252.9505 ms
+2025-07-08 14:57:35.627 +08:00 [INF] Server jeorgeoliver-la:37460:68f49c58 is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, SqlServerHeartbeatProcess, ExpirationManager, CountersAggregator, Worker, DelayedJobScheduler, RecurringJobScheduler...
+2025-07-08 14:57:35.682 +08:00 [INF] 1 servers were removed due to timeout
+2025-07-08 14:57:35.767 +08:00 [INF] Server jeorgeoliver-la:37460:68f49c58 all the dispatchers started
+2025-07-08 14:57:37.204 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7032/swagger/index.html - null null
+2025-07-08 14:57:37.438 +08:00 [INF] HTTP GET /swagger/index.html responded 200 in 99.3313 ms
+2025-07-08 14:57:37.446 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7032/_framework/aspnetcore-browser-refresh.js - null null
+2025-07-08 14:57:37.452 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7032/swagger/index.html - 200 null text/html;charset=utf-8 267.1478ms
+2025-07-08 14:57:37.457 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7032/_framework/aspnetcore-browser-refresh.js - 200 13762 application/javascript; charset=utf-8 11.0659ms
+2025-07-08 14:57:37.558 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7032/swagger/v1/swagger.json - null null
+2025-07-08 14:57:37.575 +08:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 9.1231 ms
+2025-07-08 14:57:37.584 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7032/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 25.5784ms
+2025-07-08 14:57:42.674 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7032/api/Applicant/GetApplicant - null null
+2025-07-08 14:57:42.688 +08:00 [INF] Executing endpoint 'Hang_Fire.Api.Controllers.ApplicantController.GetApplicant (Hang-Fire.Api)'
+2025-07-08 14:57:42.740 +08:00 [INF] Route matched with {action = "GetApplicant", controller = "Applicant"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetApplicant(System.Threading.CancellationToken) on controller Hang_Fire.Api.Controllers.ApplicantController (Hang-Fire.Api).
+2025-07-08 14:57:42.746 +08:00 [WRN] You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2025-07-08 14:57:42.879 +08:00 [INF] Executing action method Hang_Fire.Api.Controllers.ApplicantController.GetApplicant (Hang-Fire.Api) - Validation state: "Valid"
+2025-07-08 14:57:45.225 +08:00 [INF] Executed DbCommand (39ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[Email], [a].[FirstName], [a].[LastName], [a].[PositionApplying]
+FROM [Applicant] AS [a]
+2025-07-08 14:57:45.247 +08:00 [INF] Successfully retrieved applicants from the repository.
+2025-07-08 14:57:45.248 +08:00 [INF] HttpGet(GetApplicant) connection successfully.
+2025-07-08 14:57:45.254 +08:00 [INF] Executed action method Hang_Fire.Api.Controllers.ApplicantController.GetApplicant (Hang-Fire.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 2369.3753ms.
+2025-07-08 14:57:45.264 +08:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+SelectListIterator`2[[Hang_Fire.Domain.JobHunt.Applicant, Hang-Fire.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Hang_Fire.Application.Features.Applicants.query.GetApplicant.GetApplicantQueryDto, Hang-Fire.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-07-08 14:57:45.280 +08:00 [INF] Executed action Hang_Fire.Api.Controllers.ApplicantController.GetApplicant (Hang-Fire.Api) in 2534.1942ms
+2025-07-08 14:57:45.282 +08:00 [INF] Executed endpoint 'Hang_Fire.Api.Controllers.ApplicantController.GetApplicant (Hang-Fire.Api)'
+2025-07-08 14:57:45.283 +08:00 [INF] HTTP GET /api/Applicant/GetApplicant responded 200 in 2601.0208 ms
+2025-07-08 14:57:45.292 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7032/api/Applicant/GetApplicant - 200 null application/json; charset=utf-8 2618.5053ms
+2025-07-08 15:34:10.753 +08:00 [INF] Start installing Hangfire SQL objects...
+2025-07-08 15:34:12.766 +08:00 [INF] Hangfire SQL objects installed.
+2025-07-08 15:34:13.412 +08:00 [INF] Now listening on: https://localhost:7032
+2025-07-08 15:34:13.414 +08:00 [INF] Now listening on: http://localhost:5062
+2025-07-08 15:34:13.527 +08:00 [INF] Starting Hangfire Server using job storage: 'SQL Server: JEORGEOLIVER-LA\SQLEXPRESS02@HangfireDb'
+2025-07-08 15:34:13.529 +08:00 [INF] Using the following options for SQL Server job storage: Queue poll interval: 00:00:00.
+2025-07-08 15:34:13.529 +08:00 [INF] Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15
+2025-07-08 15:34:13.588 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-07-08 15:34:13.590 +08:00 [INF] Hosting environment: Development
+2025-07-08 15:34:13.591 +08:00 [INF] Content root path: C:\Users\Jeorge Oliver\source\repos\Hang-Fire.Api
+2025-07-08 15:34:13.801 +08:00 [INF] Server jeorgeoliver-la:31192:cff5c1bd successfully announced in 212.5667 ms
+2025-07-08 15:34:13.872 +08:00 [INF] Server jeorgeoliver-la:31192:cff5c1bd is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, SqlServerHeartbeatProcess, ExpirationManager, CountersAggregator, Worker, DelayedJobScheduler, RecurringJobScheduler...
+2025-07-08 15:34:13.918 +08:00 [INF] 1 servers were removed due to timeout
+2025-07-08 15:34:14.120 +08:00 [INF] Server jeorgeoliver-la:31192:cff5c1bd all the dispatchers started
+2025-07-08 15:34:14.404 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7032/swagger/index.html - null null
+2025-07-08 15:34:14.640 +08:00 [INF] HTTP GET /swagger/index.html responded 200 in 157.1471 ms
+2025-07-08 15:34:14.643 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7032/_framework/aspnetcore-browser-refresh.js - null null
+2025-07-08 15:34:14.655 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7032/swagger/index.html - 200 null text/html;charset=utf-8 263.2181ms
+2025-07-08 15:34:14.661 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7032/_framework/aspnetcore-browser-refresh.js - 200 13762 application/javascript; charset=utf-8 17.6756ms
+2025-07-08 15:34:14.790 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7032/swagger/v1/swagger.json - null null
+2025-07-08 15:34:14.808 +08:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 13.7246 ms
+2025-07-08 15:34:14.812 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7032/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 22.4393ms
+2025-07-08 15:34:23.429 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7032/api/Applicant/GetApplicant - null null
+2025-07-08 15:34:23.443 +08:00 [INF] Executing endpoint 'Hang_Fire.Api.Controllers.ApplicantController.GetApplicant (Hang-Fire.Api)'
+2025-07-08 15:34:23.487 +08:00 [INF] Route matched with {action = "GetApplicant", controller = "Applicant"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetApplicant(System.Threading.CancellationToken) on controller Hang_Fire.Api.Controllers.ApplicantController (Hang-Fire.Api).
+2025-07-08 15:34:23.628 +08:00 [INF] Executing action method Hang_Fire.Api.Controllers.ApplicantController.GetApplicant (Hang-Fire.Api) - Validation state: "Valid"
+2025-07-08 15:34:26.238 +08:00 [INF] Executed DbCommand (33ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[Email], [a].[FirstName], [a].[LastName], [a].[PositionApplying]
+FROM [Applicant] AS [a]
+2025-07-08 15:34:26.265 +08:00 [INF] Successfully retrieved applicants from the repository.
+2025-07-08 15:34:26.272 +08:00 [INF] HttpGet(GetApplicant) connection successfully.
+2025-07-08 15:34:26.278 +08:00 [INF] Executed action method Hang_Fire.Api.Controllers.ApplicantController.GetApplicant (Hang-Fire.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 2644.5147ms.
+2025-07-08 15:34:26.289 +08:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+SelectListIterator`2[[Hang_Fire.Domain.JobHunt.Applicant, Hang-Fire.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Hang_Fire.Application.Features.Applicants.query.GetApplicant.GetApplicantQueryDto, Hang-Fire.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-07-08 15:34:26.309 +08:00 [INF] Executed action Hang_Fire.Api.Controllers.ApplicantController.GetApplicant (Hang-Fire.Api) in 2815.41ms
+2025-07-08 15:34:26.312 +08:00 [INF] Executed endpoint 'Hang_Fire.Api.Controllers.ApplicantController.GetApplicant (Hang-Fire.Api)'
+2025-07-08 15:34:26.314 +08:00 [INF] HTTP GET /api/Applicant/GetApplicant responded 200 in 2876.4875 ms
+2025-07-08 15:34:26.322 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7032/api/Applicant/GetApplicant - 200 null application/json; charset=utf-8 2894.2972ms
+2025-07-08 15:35:12.719 +08:00 [INF] Request starting HTTP/2 POST https://localhost:7032/api/Applicant/CreateApplicant - application/json 170
+2025-07-08 15:35:12.736 +08:00 [INF] Executing endpoint 'Hang_Fire.Api.Controllers.ApplicantController.CreateApplicant (Hang-Fire.Api)'
+2025-07-08 15:35:12.745 +08:00 [INF] Route matched with {action = "CreateApplicant", controller = "Applicant"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateApplicant(Hang_Fire.Application.Features.Applicants.Command.CreateApplicant.CreateApplicantCommand, System.Threading.CancellationToken) on controller Hang_Fire.Api.Controllers.ApplicantController (Hang-Fire.Api).
+2025-07-08 15:35:12.824 +08:00 [INF] Executing action method Hang_Fire.Api.Controllers.ApplicantController.CreateApplicant (Hang-Fire.Api) - Validation state: "Valid"
+2025-07-08 15:35:13.054 +08:00 [INF] Executed DbCommand (10ms) [Parameters=[@__email_0='?' (Size = 255)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Applicant] AS [a]
+        WHERE [a].[Email] = @__email_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-07-08 15:35:13.258 +08:00 [INF] Executed DbCommand (4ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (Size = 255), @p2='?' (Size = 100), @p3='?' (Size = 100), @p4='?' (Size = 100)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Applicant] ([Id], [Email], [FirstName], [LastName], [PositionApplying])
+VALUES (@p0, @p1, @p2, @p3, @p4);
+2025-07-08 15:35:13.479 +08:00 [INF] Background job to send email to onofreraphael@gmail.com has been enqueued.
+2025-07-08 15:35:13.481 +08:00 [INF] Applicant raphael, onofre created successfully.
+2025-07-08 15:35:13.485 +08:00 [INF] HttpPost(CreateApplicant) connection successfully.
+2025-07-08 15:35:13.487 +08:00 [INF] Executed action method Hang_Fire.Api.Controllers.ApplicantController.CreateApplicant (Hang-Fire.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 660.1437ms.
+2025-07-08 15:35:13.489 +08:00 [INF] Executing OkObjectResult, writing value of type 'System.Guid'.
+2025-07-08 15:35:13.495 +08:00 [INF] Executed action Hang_Fire.Api.Controllers.ApplicantController.CreateApplicant (Hang-Fire.Api) in 746.4058ms
+2025-07-08 15:35:13.497 +08:00 [INF] Executed endpoint 'Hang_Fire.Api.Controllers.ApplicantController.CreateApplicant (Hang-Fire.Api)'
+2025-07-08 15:35:13.499 +08:00 [INF] HTTP POST /api/Applicant/CreateApplicant responded 200 in 762.9127 ms
+2025-07-08 15:35:13.505 +08:00 [INF] Request finished HTTP/2 POST https://localhost:7032/api/Applicant/CreateApplicant - 200 null application/json; charset=utf-8 786.1988ms
+2025-07-08 15:35:18.150 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7032/api/Applicant/GetApplicant - null null
+2025-07-08 15:35:18.175 +08:00 [INF] Executing endpoint 'Hang_Fire.Api.Controllers.ApplicantController.GetApplicant (Hang-Fire.Api)'
+2025-07-08 15:35:18.178 +08:00 [INF] Route matched with {action = "GetApplicant", controller = "Applicant"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetApplicant(System.Threading.CancellationToken) on controller Hang_Fire.Api.Controllers.ApplicantController (Hang-Fire.Api).
+2025-07-08 15:35:18.206 +08:00 [INF] Executing action method Hang_Fire.Api.Controllers.ApplicantController.GetApplicant (Hang-Fire.Api) - Validation state: "Valid"
+2025-07-08 15:35:18.227 +08:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[Email], [a].[FirstName], [a].[LastName], [a].[PositionApplying]
+FROM [Applicant] AS [a]
+2025-07-08 15:35:18.231 +08:00 [INF] Successfully retrieved applicants from the repository.
+2025-07-08 15:35:18.232 +08:00 [INF] HttpGet(GetApplicant) connection successfully.
+2025-07-08 15:35:18.234 +08:00 [INF] Executed action method Hang_Fire.Api.Controllers.ApplicantController.GetApplicant (Hang-Fire.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 26.0168ms.
+2025-07-08 15:35:18.237 +08:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+SelectListIterator`2[[Hang_Fire.Domain.JobHunt.Applicant, Hang-Fire.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Hang_Fire.Application.Features.Applicants.query.GetApplicant.GetApplicantQueryDto, Hang-Fire.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-07-08 15:35:18.242 +08:00 [INF] Executed action Hang_Fire.Api.Controllers.ApplicantController.GetApplicant (Hang-Fire.Api) in 60.7537ms
+2025-07-08 15:35:18.244 +08:00 [INF] Executed endpoint 'Hang_Fire.Api.Controllers.ApplicantController.GetApplicant (Hang-Fire.Api)'
+2025-07-08 15:35:18.246 +08:00 [INF] HTTP GET /api/Applicant/GetApplicant responded 200 in 71.1108 ms
+2025-07-08 15:35:18.250 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7032/api/Applicant/GetApplicant - 200 null application/json; charset=utf-8 100.2584ms
+2025-07-08 15:35:36.241 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7032/api/Applicant/GetApplicant - null null
+2025-07-08 15:35:36.246 +08:00 [INF] Executing endpoint 'Hang_Fire.Api.Controllers.ApplicantController.GetApplicant (Hang-Fire.Api)'
+2025-07-08 15:35:36.248 +08:00 [INF] Route matched with {action = "GetApplicant", controller = "Applicant"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetApplicant(System.Threading.CancellationToken) on controller Hang_Fire.Api.Controllers.ApplicantController (Hang-Fire.Api).
+2025-07-08 15:35:36.276 +08:00 [INF] Executing action method Hang_Fire.Api.Controllers.ApplicantController.GetApplicant (Hang-Fire.Api) - Validation state: "Valid"
+2025-07-08 15:35:36.288 +08:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[Email], [a].[FirstName], [a].[LastName], [a].[PositionApplying]
+FROM [Applicant] AS [a]
+2025-07-08 15:35:36.292 +08:00 [INF] Successfully retrieved applicants from the repository.
+2025-07-08 15:35:36.293 +08:00 [INF] HttpGet(GetApplicant) connection successfully.
+2025-07-08 15:35:36.294 +08:00 [INF] Executed action method Hang_Fire.Api.Controllers.ApplicantController.GetApplicant (Hang-Fire.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 16.4976ms.
+2025-07-08 15:35:36.297 +08:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+SelectListIterator`2[[Hang_Fire.Domain.JobHunt.Applicant, Hang-Fire.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Hang_Fire.Application.Features.Applicants.query.GetApplicant.GetApplicantQueryDto, Hang-Fire.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-07-08 15:35:36.299 +08:00 [INF] Executed action Hang_Fire.Api.Controllers.ApplicantController.GetApplicant (Hang-Fire.Api) in 48.4294ms
+2025-07-08 15:35:36.302 +08:00 [INF] Executed endpoint 'Hang_Fire.Api.Controllers.ApplicantController.GetApplicant (Hang-Fire.Api)'
+2025-07-08 15:35:36.304 +08:00 [INF] HTTP GET /api/Applicant/GetApplicant responded 200 in 58.0320 ms
+2025-07-08 15:35:36.307 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7032/api/Applicant/GetApplicant - 200 null application/json; charset=utf-8 66.966ms
+2025-07-08 15:57:53.477 +08:00 [INF] Start installing Hangfire SQL objects...
+2025-07-08 15:57:55.666 +08:00 [INF] Hangfire SQL objects installed.
+2025-07-08 15:57:56.179 +08:00 [INF] Now listening on: https://localhost:7032
+2025-07-08 15:57:56.181 +08:00 [INF] Now listening on: http://localhost:5062
+2025-07-08 15:57:56.282 +08:00 [INF] Starting Hangfire Server using job storage: 'SQL Server: JEORGEOLIVER-LA\SQLEXPRESS02@HangfireDb'
+2025-07-08 15:57:56.283 +08:00 [INF] Using the following options for SQL Server job storage: Queue poll interval: 00:00:00.
+2025-07-08 15:57:56.284 +08:00 [INF] Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15
+2025-07-08 15:57:56.338 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-07-08 15:57:56.339 +08:00 [INF] Hosting environment: Development
+2025-07-08 15:57:56.341 +08:00 [INF] Content root path: C:\Users\Jeorge Oliver\source\repos\Hang-Fire.Api
+2025-07-08 15:57:56.574 +08:00 [INF] Server jeorgeoliver-la:10152:5c956646 successfully announced in 237.788 ms
+2025-07-08 15:57:56.584 +08:00 [INF] Server jeorgeoliver-la:10152:5c956646 is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, SqlServerHeartbeatProcess, ExpirationManager, CountersAggregator, Worker, DelayedJobScheduler, RecurringJobScheduler...
+2025-07-08 15:57:56.622 +08:00 [INF] 1 servers were removed due to timeout
+2025-07-08 15:57:56.753 +08:00 [INF] Server jeorgeoliver-la:10152:5c956646 all the dispatchers started
+2025-07-08 15:57:56.989 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7032/swagger/index.html - null null
+2025-07-08 15:57:57.218 +08:00 [INF] HTTP GET /swagger/index.html responded 200 in 86.5420 ms
+2025-07-08 15:57:57.229 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7032/_framework/aspnetcore-browser-refresh.js - null null
+2025-07-08 15:57:57.233 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7032/swagger/index.html - 200 null text/html;charset=utf-8 258.7961ms
+2025-07-08 15:57:57.244 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7032/_framework/aspnetcore-browser-refresh.js - 200 13762 application/javascript; charset=utf-8 15.4774ms
+2025-07-08 15:57:57.332 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7032/swagger/v1/swagger.json - null null
+2025-07-08 15:57:57.351 +08:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 14.3574 ms
+2025-07-08 15:57:57.357 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7032/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 25.782ms
+2025-07-08 15:58:02.488 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7032/api/Applicant/GetApplicant - null null
+2025-07-08 15:58:02.501 +08:00 [INF] Executing endpoint 'Hang_Fire.Api.Controllers.ApplicantController.GetApplicant (Hang-Fire.Api)'
+2025-07-08 15:58:02.534 +08:00 [INF] Route matched with {action = "GetApplicant", controller = "Applicant"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetApplicant(System.Threading.CancellationToken) on controller Hang_Fire.Api.Controllers.ApplicantController (Hang-Fire.Api).
+2025-07-08 15:58:02.653 +08:00 [INF] Executing action method Hang_Fire.Api.Controllers.ApplicantController.GetApplicant (Hang-Fire.Api) - Validation state: "Valid"
+2025-07-08 15:58:05.091 +08:00 [INF] Executed DbCommand (31ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[Email], [a].[FirstName], [a].[LastName], [a].[PositionApplying]
+FROM [Applicant] AS [a]
+2025-07-08 15:58:05.112 +08:00 [INF] Successfully retrieved applicants from the repository.
+2025-07-08 15:58:05.115 +08:00 [INF] Request of type GetApplicantQuery handled successfully.
+2025-07-08 15:58:05.121 +08:00 [INF] HttpGet(GetApplicant) connection successfully.
+2025-07-08 15:58:05.127 +08:00 [INF] Executed action method Hang_Fire.Api.Controllers.ApplicantController.GetApplicant (Hang-Fire.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 2467.4144ms.
+2025-07-08 15:58:05.138 +08:00 [INF] Executing OkObjectResult, writing value of type 'FluentResults.Result`1[[System.Collections.Generic.IEnumerable`1[[Hang_Fire.Application.Features.Applicants.query.GetApplicant.GetApplicantQueryDto, Hang-Fire.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-07-08 15:58:05.173 +08:00 [INF] Executed action Hang_Fire.Api.Controllers.ApplicantController.GetApplicant (Hang-Fire.Api) in 2633.7415ms
+2025-07-08 15:58:05.175 +08:00 [INF] Executed endpoint 'Hang_Fire.Api.Controllers.ApplicantController.GetApplicant (Hang-Fire.Api)'
+2025-07-08 15:58:05.177 +08:00 [INF] HTTP GET /api/Applicant/GetApplicant responded 200 in 2680.7457 ms
+2025-07-08 15:58:05.185 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7032/api/Applicant/GetApplicant - 200 null application/json; charset=utf-8 2698.8241ms
+2025-07-08 15:59:16.888 +08:00 [INF] Start installing Hangfire SQL objects...
+2025-07-08 15:59:18.688 +08:00 [INF] Hangfire SQL objects installed.
+2025-07-08 15:59:19.053 +08:00 [INF] Now listening on: https://localhost:7032
+2025-07-08 15:59:19.055 +08:00 [INF] Now listening on: http://localhost:5062
+2025-07-08 15:59:19.140 +08:00 [INF] Starting Hangfire Server using job storage: 'SQL Server: JEORGEOLIVER-LA\SQLEXPRESS02@HangfireDb'
+2025-07-08 15:59:19.141 +08:00 [INF] Using the following options for SQL Server job storage: Queue poll interval: 00:00:00.
+2025-07-08 15:59:19.142 +08:00 [INF] Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15
+2025-07-08 15:59:19.166 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-07-08 15:59:19.173 +08:00 [INF] Hosting environment: Development
+2025-07-08 15:59:19.174 +08:00 [INF] Content root path: C:\Users\Jeorge Oliver\source\repos\Hang-Fire.Api
+2025-07-08 15:59:19.320 +08:00 [INF] Server jeorgeoliver-la:38788:f5dfebf6 successfully announced in 154.579 ms
+2025-07-08 15:59:19.327 +08:00 [INF] Server jeorgeoliver-la:38788:f5dfebf6 is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, SqlServerHeartbeatProcess, ExpirationManager, CountersAggregator, Worker, DelayedJobScheduler, RecurringJobScheduler...
+2025-07-08 15:59:19.497 +08:00 [INF] Server jeorgeoliver-la:38788:f5dfebf6 all the dispatchers started
+2025-07-08 15:59:19.828 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7032/swagger/index.html - null null
+2025-07-08 15:59:19.950 +08:00 [INF] HTTP GET /swagger/index.html responded 200 in 77.0431 ms
+2025-07-08 15:59:19.958 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7032/swagger/index.html - 200 null text/html;charset=utf-8 137.9294ms
+2025-07-08 15:59:19.963 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7032/_framework/aspnetcore-browser-refresh.js - null null
+2025-07-08 15:59:19.977 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7032/_framework/aspnetcore-browser-refresh.js - 200 13762 application/javascript; charset=utf-8 13.2003ms
+2025-07-08 15:59:20.055 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7032/swagger/v1/swagger.json - null null
+2025-07-08 15:59:20.070 +08:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 9.2402 ms
+2025-07-08 15:59:20.079 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7032/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 24.6371ms
+2025-07-08 16:01:14.018 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7032/api/Applicant/GetApplicant - null null
+2025-07-08 16:01:14.045 +08:00 [INF] Executing endpoint 'Hang_Fire.Api.Controllers.ApplicantController.GetApplicant (Hang-Fire.Api)'
+2025-07-08 16:01:14.082 +08:00 [INF] Route matched with {action = "GetApplicant", controller = "Applicant"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetApplicant(System.Threading.CancellationToken) on controller Hang_Fire.Api.Controllers.ApplicantController (Hang-Fire.Api).
+2025-07-08 16:01:14.185 +08:00 [INF] Executing action method Hang_Fire.Api.Controllers.ApplicantController.GetApplicant (Hang-Fire.Api) - Validation state: "Valid"
+2025-07-08 16:01:16.485 +08:00 [INF] Executed DbCommand (21ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[Email], [a].[FirstName], [a].[LastName], [a].[PositionApplying]
+FROM [Applicant] AS [a]
+2025-07-08 16:01:16.509 +08:00 [INF] Successfully retrieved applicants from the repository.
+2025-07-08 16:01:16.513 +08:00 [INF] Request of type GetApplicantQuery handled successfully.
+2025-07-08 16:01:16.520 +08:00 [INF] HttpGet(GetApplicant) connection successfully.
+2025-07-08 16:01:16.526 +08:00 [INF] Executed action method Hang_Fire.Api.Controllers.ApplicantController.GetApplicant (Hang-Fire.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 2335.0787ms.
+2025-07-08 16:01:16.537 +08:00 [INF] Executing OkObjectResult, writing value of type 'FluentResults.Result`1[[System.Collections.Generic.IEnumerable`1[[Hang_Fire.Application.Features.Applicants.query.GetApplicant.GetApplicantQueryDto, Hang-Fire.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-07-08 16:01:16.579 +08:00 [INF] Executed action Hang_Fire.Api.Controllers.ApplicantController.GetApplicant (Hang-Fire.Api) in 2489.7566ms
+2025-07-08 16:01:16.582 +08:00 [INF] Executed endpoint 'Hang_Fire.Api.Controllers.ApplicantController.GetApplicant (Hang-Fire.Api)'
+2025-07-08 16:01:16.585 +08:00 [INF] HTTP GET /api/Applicant/GetApplicant responded 200 in 2545.1241 ms
+2025-07-08 16:01:16.598 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7032/api/Applicant/GetApplicant - 200 null application/json; charset=utf-8 2580.5492ms
+2025-07-08 17:23:05.426 +08:00 [INF] Start installing Hangfire SQL objects...
+2025-07-08 17:23:07.469 +08:00 [INF] Hangfire SQL objects installed.
+2025-07-08 17:23:07.969 +08:00 [INF] Now listening on: https://localhost:7032
+2025-07-08 17:23:07.970 +08:00 [INF] Now listening on: http://localhost:5062
+2025-07-08 17:23:08.062 +08:00 [INF] Starting Hangfire Server using job storage: 'SQL Server: JEORGEOLIVER-LA\SQLEXPRESS02@HangfireDb'
+2025-07-08 17:23:08.063 +08:00 [INF] Using the following options for SQL Server job storage: Queue poll interval: 00:00:00.
+2025-07-08 17:23:08.064 +08:00 [INF] Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15
+2025-07-08 17:23:08.095 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-07-08 17:23:08.097 +08:00 [INF] Hosting environment: Development
+2025-07-08 17:23:08.098 +08:00 [INF] Content root path: C:\Users\Jeorge Oliver\source\repos\Hang-Fire.Api
+2025-07-08 17:23:08.481 +08:00 [INF] Server jeorgeoliver-la:7812:526073fd successfully announced in 387.1372 ms
+2025-07-08 17:23:08.489 +08:00 [INF] Server jeorgeoliver-la:7812:526073fd is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, SqlServerHeartbeatProcess, ExpirationManager, CountersAggregator, Worker, DelayedJobScheduler, RecurringJobScheduler...
+2025-07-08 17:23:08.530 +08:00 [INF] 2 servers were removed due to timeout
+2025-07-08 17:23:08.617 +08:00 [INF] Server jeorgeoliver-la:7812:526073fd all the dispatchers started
+2025-07-08 17:23:09.392 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7032/swagger/index.html - null null
+2025-07-08 17:23:09.583 +08:00 [INF] HTTP GET /swagger/index.html responded 200 in 109.7361 ms
+2025-07-08 17:23:09.596 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7032/swagger/index.html - 200 null text/html;charset=utf-8 214.469ms
+2025-07-08 17:23:09.600 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7032/_framework/aspnetcore-browser-refresh.js - null null
+2025-07-08 17:23:09.617 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7032/_framework/aspnetcore-browser-refresh.js - 200 13762 application/javascript; charset=utf-8 16.254ms
+2025-07-08 17:23:09.772 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7032/swagger/v1/swagger.json - null null
+2025-07-08 17:23:09.791 +08:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 11.9210 ms
+2025-07-08 17:23:09.797 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7032/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 25.0121ms
+2025-07-08 17:23:48.947 +08:00 [INF] Request starting HTTP/2 POST https://localhost:7032/api/Applicant/CreateApplicant - application/json 179
+2025-07-08 17:23:48.965 +08:00 [INF] Executing endpoint 'Hang_Fire.Api.Controllers.ApplicantController.CreateApplicant (Hang-Fire.Api)'
+2025-07-08 17:23:49.011 +08:00 [INF] Route matched with {action = "CreateApplicant", controller = "Applicant"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateApplicant(Hang_Fire.Application.Features.Applicants.Command.CreateApplicant.CreateApplicantCommand, System.Threading.CancellationToken) on controller Hang_Fire.Api.Controllers.ApplicantController (Hang-Fire.Api).
+2025-07-08 17:23:49.187 +08:00 [INF] Executing action method Hang_Fire.Api.Controllers.ApplicantController.CreateApplicant (Hang-Fire.Api) - Validation state: "Valid"
+2025-07-08 17:23:51.901 +08:00 [INF] Executed DbCommand (42ms) [Parameters=[@__email_0='?' (Size = 255)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Applicant] AS [a]
+        WHERE [a].[Email] = @__email_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-07-08 17:23:52.084 +08:00 [INF] Executed DbCommand (4ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (Size = 255), @p2='?' (Size = 100), @p3='?' (Size = 100), @p4='?' (Size = 100)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Applicant] ([Id], [Email], [FirstName], [LastName], [PositionApplying])
+VALUES (@p0, @p1, @p2, @p3, @p4);
+2025-07-08 17:23:52.273 +08:00 [INF] Background job to send email to onofredeanne@gmail.com has been enqueued.
+2025-07-08 17:23:52.465 +08:00 [ERR] Error handling request of type CreateApplicantCommand.
+Hangfire.BackgroundJobClientException: Background job creation failed. See inner exception for details.
+ ---> System.InvalidOperationException: Can not add a continuation: parent background job '' does not exist.
+   at Hangfire.ContinuationsSupportAttribute.AddContinuation(ElectStateContext context, AwaitingState awaitingState) in C:\projects\hangfire-525\src\Hangfire.Core\ContinuationsSupportAttribute.cs:line 135
+   at Hangfire.ContinuationsSupportAttribute.OnStateElection(ElectStateContext context) in C:\projects\hangfire-525\src\Hangfire.Core\ContinuationsSupportAttribute.cs:line 92
+   at Hangfire.States.StateMachine.InvokeOnStateElection(KeyValuePair`2 x) in C:\projects\hangfire-525\src\Hangfire.Core\States\StateMachine.cs:line 102
+   at Hangfire.Profiling.ProfilerExtensions.InvokeAction[TInstance](InstanceAction`1 tuple) in C:\projects\hangfire-525\src\Hangfire.Core\Profiling\ProfilerExtensions.cs:line 37
+   at Hangfire.Profiling.EmptyProfiler.InvokeMeasured[TInstance,TResult](TInstance instance, Func`2 action, Func`2 messageFunc) in C:\projects\hangfire-525\src\Hangfire.Core\Profiling\EmptyProfiler.cs:line 34
+   at Hangfire.Profiling.ProfilerExtensions.InvokeMeasured[TInstance](IProfiler profiler, TInstance instance, Action`1 action, Func`2 messageFunc) in C:\projects\hangfire-525\src\Hangfire.Core\Profiling\ProfilerExtensions.cs:line 29
+   at Hangfire.States.StateMachine.ApplyState(ApplyStateContext initialContext) in C:\projects\hangfire-525\src\Hangfire.Core\States\StateMachine.cs:line 62
+   at Hangfire.Client.CoreBackgroundJobFactory.<>c.<CreateBackgroundJobTwoSteps>b__15_1(Int32 attempt, JobInitializeContext ctx) in C:\projects\hangfire-525\src\Hangfire.Core\Client\CoreBackgroundJobFactory.cs:line 133
+   at Hangfire.Client.CoreBackgroundJobFactory.<>c__16`1.<RetryOnException>b__16_0(Int32 attempt, KeyValuePair`2 ctx) in C:\projects\hangfire-525\src\Hangfire.Core\Client\CoreBackgroundJobFactory.cs:line 147
+   at Hangfire.Client.CoreBackgroundJobFactory.RetryOnException[TContext,TResult](Int32& attemptsLeft, Func`3 action, TContext context) in C:\projects\hangfire-525\src\Hangfire.Core\Client\CoreBackgroundJobFactory.cs:line 167
+--- End of stack trace from previous location ---
+   at Hangfire.Client.CoreBackgroundJobFactory.RetryOnException[TContext,TResult](Int32& attemptsLeft, Func`3 action, TContext context) in C:\projects\hangfire-525\src\Hangfire.Core\Client\CoreBackgroundJobFactory.cs:line 179
+   at Hangfire.Client.CoreBackgroundJobFactory.RetryOnException[TContext](Int32& attemptsLeft, Action`2 action, TContext context) in C:\projects\hangfire-525\src\Hangfire.Core\Client\CoreBackgroundJobFactory.cs:line 145
+   at Hangfire.Client.CoreBackgroundJobFactory.CreateBackgroundJobTwoSteps(CreateContext context, Dictionary`2 parameters, DateTime createdAt, TimeSpan expireIn) in C:\projects\hangfire-525\src\Hangfire.Core\Client\CoreBackgroundJobFactory.cs:line 105
+   at Hangfire.Client.CoreBackgroundJobFactory.Create(CreateContext context) in C:\projects\hangfire-525\src\Hangfire.Core\Client\CoreBackgroundJobFactory.cs:line 73
+   at Hangfire.Client.BackgroundJobFactory.InvokeNextClientFilter(Enumerator& enumerator, IBackgroundJobFactory innerFactory, CreateContext context, CreatingContext preContext) in C:\projects\hangfire-525\src\Hangfire.Core\Client\BackgroundJobFactory.cs:line 131
+   at Hangfire.Client.BackgroundJobFactory.InvokeClientFilter(Enumerator& enumerator, IBackgroundJobFactory innerFactory, CreateContext context, CreatingContext preContext) in C:\projects\hangfire-525\src\Hangfire.Core\Client\BackgroundJobFactory.cs:line 157
+   at Hangfire.Client.BackgroundJobFactory.InvokeNextClientFilter(Enumerator& enumerator, IBackgroundJobFactory innerFactory, CreateContext context, CreatingContext preContext) in C:\projects\hangfire-525\src\Hangfire.Core\Client\BackgroundJobFactory.cs:line 128
+   at Hangfire.Client.BackgroundJobFactory.CreateWithFilters(CreateContext context, FilterCollection`1 filters) in C:\projects\hangfire-525\src\Hangfire.Core\Client\BackgroundJobFactory.cs:line 117
+   at Hangfire.Client.BackgroundJobFactory.Create(CreateContext context) in C:\projects\hangfire-525\src\Hangfire.Core\Client\BackgroundJobFactory.cs:line 84
+   at Hangfire.BackgroundJobClient.Create(Job job, IState state, IDictionary`2 parameters) in C:\projects\hangfire-525\src\Hangfire.Core\BackgroundJobClient.cs:line 156
+   --- End of inner exception stack trace ---
+   at Hangfire.BackgroundJobClient.Create(Job job, IState state, IDictionary`2 parameters) in C:\projects\hangfire-525\src\Hangfire.Core\BackgroundJobClient.cs:line 163
+   at Hangfire.BackgroundJobClient.Create(Job job, IState state) in C:\projects\hangfire-525\src\Hangfire.Core\BackgroundJobClient.cs:line 143
+   at Hangfire.BackgroundJobClientExtensions.Create(IBackgroundJobClient client, Expression`1 methodCall, IState state) in C:\projects\hangfire-525\src\Hangfire.Core\BackgroundJobClientExtensions.cs:line 541
+   at Hangfire.BackgroundJobClientExtensions.ContinueJobWith(IBackgroundJobClient client, String parentId, Expression`1 methodCall, IState nextState, JobContinuationOptions options) in C:\projects\hangfire-525\src\Hangfire.Core\BackgroundJobClientExtensions.cs:line 1165
+   at Hangfire.BackgroundJob.ContinueJobWith(String parentId, Expression`1 methodCall, JobContinuationOptions options) in C:\projects\hangfire-525\src\Hangfire.Core\BackgroundJob.cs:line 732
+   at Hang_Fire.Application.Features.BackgroundJobs.SendNotificationBackgroundJob.ExecuteBackgroundJob(String param) in C:\Users\Jeorge Oliver\source\repos\Hang-Fire.Application\Features\BackgroundJobs\SendNotificationBackgroundJob.cs:line 18
+   at Hang_Fire.Application.Features.Applicants.Command.CreateApplicant.CreateApplicantCommandHandler.Handle(CreateApplicantCommand request, CancellationToken cancellationToken) in C:\Users\Jeorge Oliver\source\repos\Hang-Fire.Application\Features\Applicants\Command\CreateApplicant\CreateApplicantCommandHandler.cs:line 41
+   at CallSite.Target(Closure, CallSite, Object)
+   at System.Dynamic.UpdateDelegates.UpdateAndExecute1[T0,TRet](CallSite site, T0 arg0)
+   at Hang_Fire.Persistence.RequestDispatcher.Send[TResponse](IRequest`1 request, CancellationToken cancellationToken)
+2025-07-08 17:23:52.558 +08:00 [ERR] Throw BadRequest Exception: Error with Message='Background job creation failed. See inner exception for details.'
+2025-07-08 17:23:52.567 +08:00 [INF] Executed action method Hang_Fire.Api.Controllers.ApplicantController.CreateApplicant (Hang-Fire.Api), returned result Microsoft.AspNetCore.Mvc.BadRequestObjectResult in 3372.5868ms.
+2025-07-08 17:23:52.581 +08:00 [INF] Executing BadRequestObjectResult, writing value of type 'System.String'.
+2025-07-08 17:23:52.589 +08:00 [INF] Executed action Hang_Fire.Api.Controllers.ApplicantController.CreateApplicant (Hang-Fire.Api) in 3571.3258ms
+2025-07-08 17:23:52.592 +08:00 [INF] Executed endpoint 'Hang_Fire.Api.Controllers.ApplicantController.CreateApplicant (Hang-Fire.Api)'
+2025-07-08 17:23:52.594 +08:00 [INF] HTTP POST /api/Applicant/CreateApplicant responded 400 in 3635.3218 ms
+2025-07-08 17:23:52.607 +08:00 [INF] Request finished HTTP/2 POST https://localhost:7032/api/Applicant/CreateApplicant - 400 null text/plain; charset=utf-8 3659.9098ms
+2025-07-08 17:57:30.001 +08:00 [INF] Start installing Hangfire SQL objects...
+2025-07-08 17:57:32.469 +08:00 [INF] Hangfire SQL objects installed.
+2025-07-08 17:57:33.069 +08:00 [INF] Now listening on: https://localhost:7032
+2025-07-08 17:57:33.071 +08:00 [INF] Now listening on: http://localhost:5062
+2025-07-08 17:57:33.175 +08:00 [INF] Starting Hangfire Server using job storage: 'SQL Server: JEORGEOLIVER-LA\SQLEXPRESS02@HangfireDb'
+2025-07-08 17:57:33.177 +08:00 [INF] Using the following options for SQL Server job storage: Queue poll interval: 00:00:00.
+2025-07-08 17:57:33.178 +08:00 [INF] Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15
+2025-07-08 17:57:33.203 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-07-08 17:57:33.205 +08:00 [INF] Hosting environment: Development
+2025-07-08 17:57:33.206 +08:00 [INF] Content root path: C:\Users\Jeorge Oliver\source\repos\Hang-Fire.Api
+2025-07-08 17:57:33.340 +08:00 [INF] Server jeorgeoliver-la:20424:2222be51 successfully announced in 138.448 ms
+2025-07-08 17:57:33.348 +08:00 [INF] Server jeorgeoliver-la:20424:2222be51 is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, SqlServerHeartbeatProcess, ExpirationManager, CountersAggregator, Worker, DelayedJobScheduler, RecurringJobScheduler...
+2025-07-08 17:57:33.384 +08:00 [INF] 1 servers were removed due to timeout
+2025-07-08 17:57:33.475 +08:00 [INF] Server jeorgeoliver-la:20424:2222be51 all the dispatchers started
+2025-07-08 17:57:34.521 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7032/swagger/index.html - null null
+2025-07-08 17:57:34.713 +08:00 [INF] HTTP GET /swagger/index.html responded 200 in 97.8552 ms
+2025-07-08 17:57:34.723 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7032/swagger/index.html - 200 null text/html;charset=utf-8 212.9384ms
+2025-07-08 17:57:34.739 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7032/_framework/aspnetcore-browser-refresh.js - null null
+2025-07-08 17:57:34.751 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7032/_framework/aspnetcore-browser-refresh.js - 200 13762 application/javascript; charset=utf-8 11.5995ms
+2025-07-08 17:57:34.871 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7032/swagger/v1/swagger.json - null null
+2025-07-08 17:57:34.895 +08:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 13.5045 ms
+2025-07-08 17:57:34.900 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7032/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 28.5209ms
+2025-07-08 17:58:19.884 +08:00 [INF] Request starting HTTP/2 POST https://localhost:7032/api/Applicant/CreateApplicant - application/json 166
+2025-07-08 17:58:19.909 +08:00 [INF] Executing endpoint 'Hang_Fire.Api.Controllers.ApplicantController.CreateApplicant (Hang-Fire.Api)'
+2025-07-08 17:58:19.960 +08:00 [INF] Route matched with {action = "CreateApplicant", controller = "Applicant"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateApplicant(Hang_Fire.Application.Features.Applicants.Command.CreateApplicant.CreateApplicantCommand, System.Threading.CancellationToken) on controller Hang_Fire.Api.Controllers.ApplicantController (Hang-Fire.Api).
+2025-07-08 17:58:20.133 +08:00 [INF] Executing action method Hang_Fire.Api.Controllers.ApplicantController.CreateApplicant (Hang-Fire.Api) - Validation state: "Valid"
+2025-07-08 17:58:22.918 +08:00 [INF] Executed DbCommand (40ms) [Parameters=[@__email_0='?' (Size = 255)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Applicant] AS [a]
+        WHERE [a].[Email] = @__email_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-07-08 17:58:23.126 +08:00 [INF] Executed DbCommand (4ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (Size = 255), @p2='?' (Size = 100), @p3='?' (Size = 100), @p4='?' (Size = 100)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Applicant] ([Id], [Email], [FirstName], [LastName], [PositionApplying])
+VALUES (@p0, @p1, @p2, @p3, @p4);
+2025-07-08 17:58:27.637 +08:00 [INF] Background job to send email to albispresly@gmail.com has been enqueued.
+2025-07-08 17:58:33.970 +08:00 [INF] Background job to send notification has been enqueued.
+2025-07-08 17:58:38.325 +08:00 [INF] Request of type CreateApplicantCommand handled successfully.
+2025-07-08 17:58:38.330 +08:00 [INF] HttpPost(CreateApplicant) connection successfully.
+2025-07-08 17:58:38.337 +08:00 [INF] Executed action method Hang_Fire.Api.Controllers.ApplicantController.CreateApplicant (Hang-Fire.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 18196.914ms.
+2025-07-08 17:58:38.348 +08:00 [INF] Executing OkObjectResult, writing value of type 'FluentResults.Result`1[[System.Guid, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-07-08 17:58:38.369 +08:00 [INF] Executed action Hang_Fire.Api.Controllers.ApplicantController.CreateApplicant (Hang-Fire.Api) in 18401.4779ms
+2025-07-08 17:58:38.371 +08:00 [INF] Executed endpoint 'Hang_Fire.Api.Controllers.ApplicantController.CreateApplicant (Hang-Fire.Api)'
+2025-07-08 17:58:38.374 +08:00 [INF] HTTP POST /api/Applicant/CreateApplicant responded 200 in 18471.1831 ms
+2025-07-08 17:58:38.385 +08:00 [INF] Request finished HTTP/2 POST https://localhost:7032/api/Applicant/CreateApplicant - 200 null application/json; charset=utf-8 18500.8384ms
+2025-07-08 22:10:46.131 +08:00 [INF] Start installing Hangfire SQL objects...
+2025-07-08 22:10:47.924 +08:00 [INF] Hangfire SQL objects installed.
+2025-07-08 22:10:48.285 +08:00 [INF] Now listening on: https://localhost:7032
+2025-07-08 22:10:48.286 +08:00 [INF] Now listening on: http://localhost:5062
+2025-07-08 22:10:48.418 +08:00 [INF] Starting Hangfire Server using job storage: 'SQL Server: JEORGEOLIVER-LA\SQLEXPRESS02@HangfireDb'
+2025-07-08 22:10:48.419 +08:00 [INF] Using the following options for SQL Server job storage: Queue poll interval: 00:00:00.
+2025-07-08 22:10:48.420 +08:00 [INF] Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15
+2025-07-08 22:10:48.437 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-07-08 22:10:48.438 +08:00 [INF] Hosting environment: Development
+2025-07-08 22:10:48.439 +08:00 [INF] Content root path: C:\Users\Jeorge Oliver\source\repos\Hang-Fire.Api
+2025-07-08 22:10:48.617 +08:00 [INF] Server jeorgeoliver-la:21724:38c922d1 successfully announced in 181.5987 ms
+2025-07-08 22:10:48.623 +08:00 [INF] Server jeorgeoliver-la:21724:38c922d1 is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, SqlServerHeartbeatProcess, ExpirationManager, CountersAggregator, Worker, DelayedJobScheduler, RecurringJobScheduler...
+2025-07-08 22:10:48.646 +08:00 [INF] 1 servers were removed due to timeout
+2025-07-08 22:10:48.714 +08:00 [INF] Server jeorgeoliver-la:21724:38c922d1 all the dispatchers started
+2025-07-08 22:10:50.159 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7032/swagger/index.html - null null
+2025-07-08 22:10:50.508 +08:00 [INF] HTTP GET /swagger/index.html responded 200 in 74.9663 ms
+2025-07-08 22:10:50.518 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7032/swagger/index.html - 200 null text/html;charset=utf-8 374.0268ms
+2025-07-08 22:10:50.521 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7032/_vs/browserLink - null null
+2025-07-08 22:10:50.521 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7032/_framework/aspnetcore-browser-refresh.js - null null
+2025-07-08 22:10:50.544 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7032/_framework/aspnetcore-browser-refresh.js - 200 13762 application/javascript; charset=utf-8 24.1238ms
+2025-07-08 22:10:50.589 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7032/_vs/browserLink - 200 null text/javascript; charset=UTF-8 69.3649ms
+2025-07-08 22:10:50.708 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7032/swagger/v1/swagger.json - null null
+2025-07-08 22:10:50.722 +08:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 9.4569 ms
+2025-07-08 22:10:50.726 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7032/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 17.8101ms
+2025-07-08 22:11:20.120 +08:00 [INF] Request starting HTTP/2 POST https://localhost:7032/api/Applicant/CreateApplicant - application/json 170
+2025-07-08 22:11:20.132 +08:00 [INF] Executing endpoint 'Hang_Fire.Api.Controllers.ApplicantController.CreateApplicant (Hang-Fire.Api)'
+2025-07-08 22:11:20.162 +08:00 [INF] Route matched with {action = "CreateApplicant", controller = "Applicant"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateApplicant(Hang_Fire.Application.Features.Applicants.Command.CreateApplicant.CreateApplicantCommand, System.Threading.CancellationToken) on controller Hang_Fire.Api.Controllers.ApplicantController (Hang-Fire.Api).
+2025-07-08 22:11:20.256 +08:00 [INF] Executing action method Hang_Fire.Api.Controllers.ApplicantController.CreateApplicant (Hang-Fire.Api) - Validation state: "Valid"
+2025-07-08 22:11:22.394 +08:00 [INF] Executed DbCommand (32ms) [Parameters=[@__email_0='?' (Size = 255)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Applicant] AS [a]
+        WHERE [a].[Email] = @__email_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-07-08 22:11:22.533 +08:00 [INF] Executed DbCommand (2ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (Size = 255), @p2='?' (Size = 100), @p3='?' (Size = 100), @p4='?' (Size = 100)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Applicant] ([Id], [Email], [FirstName], [LastName], [PositionApplying])
+VALUES (@p0, @p1, @p2, @p3, @p4);
+2025-07-08 22:11:22.594 +08:00 [ERR] Failed to enqueue email job to No service for type 'Hang_Fire.Job.EmailService' has been registered.!
+2025-07-08 22:11:22.622 +08:00 [ERR] Failed to enqueue email job to No service for type 'Hang_Fire.Job.NotificationService' has been registered.!
+2025-07-08 22:11:22.624 +08:00 [INF] Request of type CreateApplicantCommand handled successfully.
+2025-07-08 22:11:22.628 +08:00 [INF] HttpPost(CreateApplicant) connection successfully.
+2025-07-08 22:11:22.632 +08:00 [INF] Executed action method Hang_Fire.Api.Controllers.ApplicantController.CreateApplicant (Hang-Fire.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 2372.1659ms.
+2025-07-08 22:11:22.640 +08:00 [INF] Executing OkObjectResult, writing value of type 'FluentResults.Result`1[[System.Guid, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-07-08 22:11:22.651 +08:00 [INF] Executed action Hang_Fire.Api.Controllers.ApplicantController.CreateApplicant (Hang-Fire.Api) in 2484.5406ms
+2025-07-08 22:11:22.653 +08:00 [INF] Executed endpoint 'Hang_Fire.Api.Controllers.ApplicantController.CreateApplicant (Hang-Fire.Api)'
+2025-07-08 22:11:22.655 +08:00 [INF] HTTP POST /api/Applicant/CreateApplicant responded 200 in 2528.4613 ms
+2025-07-08 22:11:22.662 +08:00 [INF] Request finished HTTP/2 POST https://localhost:7032/api/Applicant/CreateApplicant - 200 null application/json; charset=utf-8 2542.2543ms
+2025-07-08 22:14:23.360 +08:00 [INF] Start installing Hangfire SQL objects...
+2025-07-08 22:14:24.968 +08:00 [INF] Hangfire SQL objects installed.
+2025-07-08 22:14:25.205 +08:00 [INF] Now listening on: https://localhost:7032
+2025-07-08 22:14:25.206 +08:00 [INF] Now listening on: http://localhost:5062
+2025-07-08 22:14:25.273 +08:00 [INF] Starting Hangfire Server using job storage: 'SQL Server: JEORGEOLIVER-LA\SQLEXPRESS02@HangfireDb'
+2025-07-08 22:14:25.274 +08:00 [INF] Using the following options for SQL Server job storage: Queue poll interval: 00:00:00.
+2025-07-08 22:14:25.274 +08:00 [INF] Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15
+2025-07-08 22:14:25.290 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-07-08 22:14:25.295 +08:00 [INF] Hosting environment: Development
+2025-07-08 22:14:25.296 +08:00 [INF] Content root path: C:\Users\Jeorge Oliver\source\repos\Hang-Fire.Api
+2025-07-08 22:14:25.374 +08:00 [INF] Server jeorgeoliver-la:11016:12c9eafa successfully announced in 85.5179 ms
+2025-07-08 22:14:25.379 +08:00 [INF] Server jeorgeoliver-la:11016:12c9eafa is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, SqlServerHeartbeatProcess, ExpirationManager, CountersAggregator, Worker, DelayedJobScheduler, RecurringJobScheduler...
+2025-07-08 22:14:25.443 +08:00 [INF] Server jeorgeoliver-la:11016:12c9eafa all the dispatchers started
+2025-07-08 22:14:25.771 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7032/swagger/index.html - null null
+2025-07-08 22:14:26.041 +08:00 [INF] HTTP GET /swagger/index.html responded 200 in 54.7101 ms
+2025-07-08 22:14:26.048 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7032/swagger/index.html - 200 null text/html;charset=utf-8 285.5022ms
+2025-07-08 22:14:26.049 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7032/_vs/browserLink - null null
+2025-07-08 22:14:26.049 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7032/_framework/aspnetcore-browser-refresh.js - null null
+2025-07-08 22:14:26.083 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7032/_framework/aspnetcore-browser-refresh.js - 200 13762 application/javascript; charset=utf-8 34.3115ms
+2025-07-08 22:14:26.119 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7032/_vs/browserLink - 200 null text/javascript; charset=UTF-8 69.6404ms
+2025-07-08 22:14:26.247 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7032/swagger/v1/swagger.json - null null
+2025-07-08 22:14:26.257 +08:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 6.8091 ms
+2025-07-08 22:14:26.260 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7032/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 13.3642ms
+2025-07-08 22:14:39.966 +08:00 [INF] Request starting HTTP/2 POST https://localhost:7032/api/Applicant/CreateApplicant - application/json 161
+2025-07-08 22:14:39.979 +08:00 [INF] Executing endpoint 'Hang_Fire.Api.Controllers.ApplicantController.CreateApplicant (Hang-Fire.Api)'
+2025-07-08 22:14:40.008 +08:00 [INF] Route matched with {action = "CreateApplicant", controller = "Applicant"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateApplicant(Hang_Fire.Application.Features.Applicants.Command.CreateApplicant.CreateApplicantCommand, System.Threading.CancellationToken) on controller Hang_Fire.Api.Controllers.ApplicantController (Hang-Fire.Api).
+2025-07-08 22:14:40.086 +08:00 [INF] Executing action method Hang_Fire.Api.Controllers.ApplicantController.CreateApplicant (Hang-Fire.Api) - Validation state: "Valid"
+2025-07-08 22:14:42.104 +08:00 [INF] Executed DbCommand (19ms) [Parameters=[@__email_0='?' (Size = 255)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Applicant] AS [a]
+        WHERE [a].[Email] = @__email_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-07-08 22:17:23.817 +08:00 [INF] Start installing Hangfire SQL objects...
+2025-07-08 22:17:25.442 +08:00 [INF] Hangfire SQL objects installed.
+2025-07-08 22:17:25.679 +08:00 [INF] Now listening on: https://localhost:7032
+2025-07-08 22:17:25.681 +08:00 [INF] Now listening on: http://localhost:5062
+2025-07-08 22:17:25.747 +08:00 [INF] Starting Hangfire Server using job storage: 'SQL Server: JEORGEOLIVER-LA\SQLEXPRESS02@HangfireDb'
+2025-07-08 22:17:25.748 +08:00 [INF] Using the following options for SQL Server job storage: Queue poll interval: 00:00:00.
+2025-07-08 22:17:25.749 +08:00 [INF] Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15
+2025-07-08 22:17:25.787 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-07-08 22:17:25.793 +08:00 [INF] Hosting environment: Development
+2025-07-08 22:17:25.794 +08:00 [INF] Content root path: C:\Users\Jeorge Oliver\source\repos\Hang-Fire.Api
+2025-07-08 22:17:25.879 +08:00 [INF] Server jeorgeoliver-la:7416:59f23948 successfully announced in 93.7609 ms
+2025-07-08 22:17:25.886 +08:00 [INF] Server jeorgeoliver-la:7416:59f23948 is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, SqlServerHeartbeatProcess, ExpirationManager, CountersAggregator, Worker, DelayedJobScheduler, RecurringJobScheduler...
+2025-07-08 22:17:26.015 +08:00 [INF] Server jeorgeoliver-la:7416:59f23948 all the dispatchers started
+2025-07-08 22:17:26.180 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7032/swagger/index.html - null null
+2025-07-08 22:17:26.383 +08:00 [INF] HTTP GET /swagger/index.html responded 200 in 48.3613 ms
+2025-07-08 22:17:26.399 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7032/swagger/index.html - 200 null text/html;charset=utf-8 226.285ms
+2025-07-08 22:17:26.400 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7032/_framework/aspnetcore-browser-refresh.js - null null
+2025-07-08 22:17:26.400 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7032/_vs/browserLink - null null
+2025-07-08 22:17:26.410 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7032/_framework/aspnetcore-browser-refresh.js - 200 13762 application/javascript; charset=utf-8 9.8532ms
+2025-07-08 22:17:26.445 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7032/_vs/browserLink - 200 null text/javascript; charset=UTF-8 45.3384ms
+2025-07-08 22:17:26.481 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7032/swagger/v1/swagger.json - null null
+2025-07-08 22:17:26.491 +08:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 6.9068 ms
+2025-07-08 22:17:26.494 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7032/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 13.5394ms
+2025-07-08 22:17:37.949 +08:00 [INF] Request starting HTTP/2 POST https://localhost:7032/api/Applicant/CreateApplicant - application/json 161
+2025-07-08 22:17:37.958 +08:00 [INF] Executing endpoint 'Hang_Fire.Api.Controllers.ApplicantController.CreateApplicant (Hang-Fire.Api)'
+2025-07-08 22:17:37.980 +08:00 [INF] Route matched with {action = "CreateApplicant", controller = "Applicant"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateApplicant(Hang_Fire.Application.Features.Applicants.Command.CreateApplicant.CreateApplicantCommand, System.Threading.CancellationToken) on controller Hang_Fire.Api.Controllers.ApplicantController (Hang-Fire.Api).
+2025-07-08 22:17:38.062 +08:00 [INF] Executing action method Hang_Fire.Api.Controllers.ApplicantController.CreateApplicant (Hang-Fire.Api) - Validation state: "Valid"
+2025-07-08 22:17:40.039 +08:00 [INF] Executed DbCommand (16ms) [Parameters=[@__email_0='?' (Size = 255)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Applicant] AS [a]
+        WHERE [a].[Email] = @__email_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-07-08 22:20:52.044 +08:00 [INF] Start installing Hangfire SQL objects...
+2025-07-08 22:20:53.672 +08:00 [INF] Hangfire SQL objects installed.
+2025-07-08 22:20:53.910 +08:00 [INF] Now listening on: https://localhost:7032
+2025-07-08 22:20:53.911 +08:00 [INF] Now listening on: http://localhost:5062
+2025-07-08 22:20:53.988 +08:00 [INF] Starting Hangfire Server using job storage: 'SQL Server: JEORGEOLIVER-LA\SQLEXPRESS02@HangfireDb'
+2025-07-08 22:20:53.989 +08:00 [INF] Using the following options for SQL Server job storage: Queue poll interval: 00:00:00.
+2025-07-08 22:20:53.990 +08:00 [INF] Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15
+2025-07-08 22:20:54.008 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-07-08 22:20:54.015 +08:00 [INF] Hosting environment: Development
+2025-07-08 22:20:54.016 +08:00 [INF] Content root path: C:\Users\Jeorge Oliver\source\repos\Hang-Fire.Api
+2025-07-08 22:20:54.131 +08:00 [INF] Server jeorgeoliver-la:456:447d0dd2 successfully announced in 123.0402 ms
+2025-07-08 22:20:54.163 +08:00 [INF] Server jeorgeoliver-la:456:447d0dd2 is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, SqlServerHeartbeatProcess, ExpirationManager, CountersAggregator, Worker, DelayedJobScheduler, RecurringJobScheduler...
+2025-07-08 22:20:54.214 +08:00 [INF] 2 servers were removed due to timeout
+2025-07-08 22:20:54.369 +08:00 [INF] Server jeorgeoliver-la:456:447d0dd2 all the dispatchers started
+2025-07-08 22:20:54.452 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7032/swagger/index.html - null null
+2025-07-08 22:20:54.631 +08:00 [INF] HTTP GET /swagger/index.html responded 200 in 48.1978 ms
+2025-07-08 22:20:54.637 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7032/_framework/aspnetcore-browser-refresh.js - null null
+2025-07-08 22:20:54.637 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7032/_vs/browserLink - null null
+2025-07-08 22:20:54.638 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7032/swagger/index.html - 200 null text/html;charset=utf-8 191.3785ms
+2025-07-08 22:20:54.655 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7032/_framework/aspnetcore-browser-refresh.js - 200 13762 application/javascript; charset=utf-8 18.3028ms
+2025-07-08 22:20:54.687 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7032/_vs/browserLink - 200 null text/javascript; charset=UTF-8 50.3347ms
+2025-07-08 22:20:54.718 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7032/swagger/v1/swagger.json - null null
+2025-07-08 22:20:54.731 +08:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 8.9589 ms
+2025-07-08 22:20:54.734 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7032/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 16.3226ms
+2025-07-08 22:21:09.140 +08:00 [INF] Request starting HTTP/2 POST https://localhost:7032/api/Applicant/CreateApplicant - application/json 161
+2025-07-08 22:21:09.148 +08:00 [INF] Executing endpoint 'Hang_Fire.Api.Controllers.ApplicantController.CreateApplicant (Hang-Fire.Api)'
+2025-07-08 22:21:09.170 +08:00 [INF] Route matched with {action = "CreateApplicant", controller = "Applicant"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateApplicant(Hang_Fire.Application.Features.Applicants.Command.CreateApplicant.CreateApplicantCommand, System.Threading.CancellationToken) on controller Hang_Fire.Api.Controllers.ApplicantController (Hang-Fire.Api).
+2025-07-08 22:21:09.251 +08:00 [INF] Executing action method Hang_Fire.Api.Controllers.ApplicantController.CreateApplicant (Hang-Fire.Api) - Validation state: "Valid"
+2025-07-08 22:21:11.228 +08:00 [INF] Executed DbCommand (17ms) [Parameters=[@__email_0='?' (Size = 255)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Applicant] AS [a]
+        WHERE [a].[Email] = @__email_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-07-08 22:21:27.641 +08:00 [INF] Background Email with parameter admin@admin.com has been enqueued.
+2025-07-08 22:21:30.946 +08:00 [INF] Background Notification with parameter 21 has been enqueued.
+2025-07-08 22:21:30.949 +08:00 [INF] Request of type CreateApplicantCommand handled successfully.
+2025-07-08 22:21:30.953 +08:00 [INF] HttpPost(CreateApplicant) connection successfully.
+2025-07-08 22:21:30.958 +08:00 [INF] Executed action method Hang_Fire.Api.Controllers.ApplicantController.CreateApplicant (Hang-Fire.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 21702.0401ms.
+2025-07-08 22:21:30.965 +08:00 [INF] Executing OkObjectResult, writing value of type 'FluentResults.Result`1[[System.Guid, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-07-08 22:21:30.977 +08:00 [INF] Executed action Hang_Fire.Api.Controllers.ApplicantController.CreateApplicant (Hang-Fire.Api) in 21802.2741ms
+2025-07-08 22:21:30.979 +08:00 [INF] Executed endpoint 'Hang_Fire.Api.Controllers.ApplicantController.CreateApplicant (Hang-Fire.Api)'
+2025-07-08 22:21:30.981 +08:00 [INF] HTTP POST /api/Applicant/CreateApplicant responded 200 in 21835.0855 ms
+2025-07-08 22:21:30.988 +08:00 [INF] Request finished HTTP/2 POST https://localhost:7032/api/Applicant/CreateApplicant - 200 null application/json; charset=utf-8 21848.6684ms
+2025-07-08 22:21:41.046 +08:00 [INF] [Background] Sent an Notification Email to 21
+2025-07-08 22:21:43.771 +08:00 [INF] [Background] Sent an Confirmation Email to admin@admin.com 

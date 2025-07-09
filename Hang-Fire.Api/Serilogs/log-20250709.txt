@@ -1,0 +1,749 @@
+2025-07-09 07:14:17.419 +08:00 [INF] Start installing Hangfire SQL objects...
+2025-07-09 07:14:19.146 +08:00 [INF] Hangfire SQL objects installed.
+2025-07-09 07:14:20.548 +08:00 [INF] Now listening on: https://localhost:7032
+2025-07-09 07:14:20.549 +08:00 [INF] Now listening on: http://localhost:5062
+2025-07-09 07:14:20.620 +08:00 [INF] Starting Hangfire Server using job storage: 'SQL Server: JEORGEOLIVER-LA\SQLEXPRESS02@HangfireDb'
+2025-07-09 07:14:20.621 +08:00 [INF] Using the following options for SQL Server job storage: Queue poll interval: 00:00:00.
+2025-07-09 07:14:20.622 +08:00 [INF] Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15
+2025-07-09 07:14:20.641 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-07-09 07:14:20.643 +08:00 [INF] Hosting environment: Development
+2025-07-09 07:14:20.643 +08:00 [INF] Content root path: C:\Users\Jeorge Oliver\source\repos\hangfire-tutorial\Hang-Fire.Api
+2025-07-09 07:14:20.835 +08:00 [INF] Server jeorgeoliver-la:14840:94215a88 successfully announced in 194.5094 ms
+2025-07-09 07:14:20.841 +08:00 [INF] Server jeorgeoliver-la:14840:94215a88 is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, SqlServerHeartbeatProcess, ExpirationManager, CountersAggregator, Worker, DelayedJobScheduler, RecurringJobScheduler...
+2025-07-09 07:14:20.869 +08:00 [INF] 2 servers were removed due to timeout
+2025-07-09 07:14:20.926 +08:00 [INF] Server jeorgeoliver-la:14840:94215a88 all the dispatchers started
+2025-07-09 07:14:21.348 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7032/swagger/index.html - null null
+2025-07-09 07:14:21.599 +08:00 [INF] HTTP GET /swagger/index.html responded 200 in 49.7982 ms
+2025-07-09 07:14:21.605 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7032/swagger/index.html - 200 null text/html;charset=utf-8 264.3786ms
+2025-07-09 07:14:21.606 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7032/_framework/aspnetcore-browser-refresh.js - null null
+2025-07-09 07:14:21.608 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7032/_vs/browserLink - null null
+2025-07-09 07:14:21.617 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7032/_framework/aspnetcore-browser-refresh.js - 200 13762 application/javascript; charset=utf-8 10.7382ms
+2025-07-09 07:14:21.660 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7032/_vs/browserLink - 200 null text/javascript; charset=UTF-8 51.756ms
+2025-07-09 07:14:21.691 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7032/swagger/v1/swagger.json - null null
+2025-07-09 07:14:21.700 +08:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 4.9928 ms
+2025-07-09 07:14:21.703 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7032/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 11.4918ms
+2025-07-09 07:14:32.115 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7032/api/Applicant/GetApplicant - null null
+2025-07-09 07:14:32.125 +08:00 [INF] Executing endpoint 'Hang_Fire.Api.Controllers.ApplicantController.GetApplicant (Hang-Fire.Api)'
+2025-07-09 07:14:32.151 +08:00 [INF] Route matched with {action = "GetApplicant", controller = "Applicant"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetApplicant(System.Threading.CancellationToken) on controller Hang_Fire.Api.Controllers.ApplicantController (Hang-Fire.Api).
+2025-07-09 07:14:32.222 +08:00 [INF] Executing action method Hang_Fire.Api.Controllers.ApplicantController.GetApplicant (Hang-Fire.Api) - Validation state: "Valid"
+2025-07-09 07:14:34.224 +08:00 [INF] Executed DbCommand (19ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[Email], [a].[FirstName], [a].[LastName], [a].[PositionApplying]
+FROM [Applicant] AS [a]
+2025-07-09 07:14:34.240 +08:00 [INF] Request of type GetApplicantQuery handled successfully.
+2025-07-09 07:14:34.243 +08:00 [INF] HttpGet(GetApplicant) connection successfully.
+2025-07-09 07:14:34.247 +08:00 [INF] Executed action method Hang_Fire.Api.Controllers.ApplicantController.GetApplicant (Hang-Fire.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 2020.6487ms.
+2025-07-09 07:14:34.253 +08:00 [INF] Executing OkObjectResult, writing value of type 'FluentResults.Result`1[[System.Collections.Generic.IEnumerable`1[[Hang_Fire.Application.Features.Applicants.Query.GetApplicant.GetApplicantQueryDto, Hang-Fire.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-07-09 07:14:34.276 +08:00 [INF] Executed action Hang_Fire.Api.Controllers.ApplicantController.GetApplicant (Hang-Fire.Api) in 2120.6581ms
+2025-07-09 07:14:34.277 +08:00 [INF] Executed endpoint 'Hang_Fire.Api.Controllers.ApplicantController.GetApplicant (Hang-Fire.Api)'
+2025-07-09 07:14:34.279 +08:00 [INF] HTTP GET /api/Applicant/GetApplicant responded 200 in 2158.1487 ms
+2025-07-09 07:14:34.286 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7032/api/Applicant/GetApplicant - 200 null application/json; charset=utf-8 2171.902ms
+2025-07-09 07:15:33.794 +08:00 [WRN] Stopping the server due to DomainUnload or ProcessExit event...
+2025-07-09 07:15:33.795 +08:00 [INF] Server jeorgeoliver-la:14840:94215a88 caught stopping signal...
+2025-07-09 07:15:33.813 +08:00 [INF] Server jeorgeoliver-la:14840:94215a88 caught stopped signal...
+2025-07-09 07:15:33.819 +08:00 [WRN] Server jeorgeoliver-la:14840:94215a88 caught shutdown signal...
+2025-07-09 07:15:33.820 +08:00 [INF] Server jeorgeoliver-la:14840:94215a88 All dispatchers stopped
+2025-07-09 07:19:52.484 +08:00 [INF] Start installing Hangfire SQL objects...
+2025-07-09 07:19:54.157 +08:00 [INF] Hangfire SQL objects installed.
+2025-07-09 07:19:54.407 +08:00 [INF] Now listening on: https://localhost:7032
+2025-07-09 07:19:54.409 +08:00 [INF] Now listening on: http://localhost:5062
+2025-07-09 07:19:54.480 +08:00 [INF] Starting Hangfire Server using job storage: 'SQL Server: JEORGEOLIVER-LA\SQLEXPRESS02@HangfireDb'
+2025-07-09 07:19:54.481 +08:00 [INF] Using the following options for SQL Server job storage: Queue poll interval: 00:00:00.
+2025-07-09 07:19:54.482 +08:00 [INF] Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15
+2025-07-09 07:19:54.527 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-07-09 07:19:54.531 +08:00 [INF] Hosting environment: Development
+2025-07-09 07:19:54.534 +08:00 [INF] Content root path: C:\Users\Jeorge Oliver\source\repos\hangfire-tutorial\Hang-Fire.Api
+2025-07-09 07:19:54.663 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7032/swagger/index.html - null null
+2025-07-09 07:19:54.669 +08:00 [INF] Server jeorgeoliver-la:12980:be9c1334 successfully announced in 143.26 ms
+2025-07-09 07:19:54.677 +08:00 [INF] Server jeorgeoliver-la:12980:be9c1334 is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, SqlServerHeartbeatProcess, ExpirationManager, CountersAggregator, Worker, DelayedJobScheduler, RecurringJobScheduler...
+2025-07-09 07:19:54.814 +08:00 [INF] Server jeorgeoliver-la:12980:be9c1334 all the dispatchers started
+2025-07-09 07:19:54.993 +08:00 [INF] HTTP GET /swagger/index.html responded 200 in 47.4165 ms
+2025-07-09 07:19:54.997 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7032/_framework/aspnetcore-browser-refresh.js - null null
+2025-07-09 07:19:54.997 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7032/_vs/browserLink - null null
+2025-07-09 07:19:55.000 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7032/swagger/index.html - 200 null text/html;charset=utf-8 348.5963ms
+2025-07-09 07:19:55.015 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7032/_framework/aspnetcore-browser-refresh.js - 200 13762 application/javascript; charset=utf-8 18.3916ms
+2025-07-09 07:19:55.044 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7032/_vs/browserLink - 200 null text/javascript; charset=UTF-8 47.7814ms
+2025-07-09 07:19:55.072 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7032/swagger/v1/swagger.json - null null
+2025-07-09 07:19:55.080 +08:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 5.6650 ms
+2025-07-09 07:19:55.082 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7032/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 10.7072ms
+2025-07-09 07:19:59.568 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7032/api/Applicant/GetApplicant - null null
+2025-07-09 07:19:59.576 +08:00 [INF] Executing endpoint 'Hang_Fire.Api.Controllers.ApplicantController.GetApplicant (Hang-Fire.Api)'
+2025-07-09 07:19:59.596 +08:00 [INF] Route matched with {action = "GetApplicant", controller = "Applicant"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetApplicant(System.Threading.CancellationToken) on controller Hang_Fire.Api.Controllers.ApplicantController (Hang-Fire.Api).
+2025-07-09 07:19:59.658 +08:00 [INF] Executing action method Hang_Fire.Api.Controllers.ApplicantController.GetApplicant (Hang-Fire.Api) - Validation state: "Valid"
+2025-07-09 07:20:01.546 +08:00 [INF] Executed DbCommand (31ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[Email], [a].[FirstName], [a].[LastName], [a].[PositionApplying]
+FROM [Applicant] AS [a]
+2025-07-09 07:20:01.563 +08:00 [INF] Request of type GetApplicantQuery handled successfully.
+2025-07-09 07:20:01.567 +08:00 [INF] HttpGet(GetApplicant) connection successfully.
+2025-07-09 07:20:01.571 +08:00 [INF] Executed action method Hang_Fire.Api.Controllers.ApplicantController.GetApplicant (Hang-Fire.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 1908.9193ms.
+2025-07-09 07:20:01.577 +08:00 [INF] Executing OkObjectResult, writing value of type 'FluentResults.Result`1[[System.Collections.Generic.IEnumerable`1[[Hang_Fire.Application.Features.Applicants.Query.GetApplicant.GetApplicantQueryDto, Hang-Fire.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-07-09 07:20:01.598 +08:00 [INF] Executed action Hang_Fire.Api.Controllers.ApplicantController.GetApplicant (Hang-Fire.Api) in 1998.5744ms
+2025-07-09 07:20:01.599 +08:00 [INF] Executed endpoint 'Hang_Fire.Api.Controllers.ApplicantController.GetApplicant (Hang-Fire.Api)'
+2025-07-09 07:20:01.601 +08:00 [INF] HTTP GET /api/Applicant/GetApplicant responded 200 in 2027.8317 ms
+2025-07-09 07:20:01.607 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7032/api/Applicant/GetApplicant - 200 null application/json; charset=utf-8 2039.7369ms
+2025-07-09 07:30:52.229 +08:00 [INF] Start installing Hangfire SQL objects...
+2025-07-09 07:30:53.946 +08:00 [INF] Hangfire SQL objects installed.
+2025-07-09 07:30:54.208 +08:00 [INF] Now listening on: https://localhost:7032
+2025-07-09 07:30:54.210 +08:00 [INF] Now listening on: http://localhost:5062
+2025-07-09 07:30:54.282 +08:00 [INF] Starting Hangfire Server using job storage: 'SQL Server: JEORGEOLIVER-LA\SQLEXPRESS02@HangfireDb'
+2025-07-09 07:30:54.283 +08:00 [INF] Using the following options for SQL Server job storage: Queue poll interval: 00:00:00.
+2025-07-09 07:30:54.284 +08:00 [INF] Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15
+2025-07-09 07:30:54.336 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-07-09 07:30:54.341 +08:00 [INF] Hosting environment: Development
+2025-07-09 07:30:54.343 +08:00 [INF] Content root path: C:\Users\Jeorge Oliver\source\repos\hangfire-tutorial\Hang-Fire-Tutorial\Hang-Fire.Api
+2025-07-09 07:30:54.430 +08:00 [INF] Server jeorgeoliver-la:24556:7de41f1d successfully announced in 94.1684 ms
+2025-07-09 07:30:54.436 +08:00 [INF] Server jeorgeoliver-la:24556:7de41f1d is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, SqlServerHeartbeatProcess, ExpirationManager, CountersAggregator, Worker, DelayedJobScheduler, RecurringJobScheduler...
+2025-07-09 07:30:54.462 +08:00 [INF] 2 servers were removed due to timeout
+2025-07-09 07:30:54.562 +08:00 [INF] Server jeorgeoliver-la:24556:7de41f1d all the dispatchers started
+2025-07-09 07:30:54.650 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7032/swagger/index.html - null null
+2025-07-09 07:30:54.868 +08:00 [INF] HTTP GET /swagger/index.html responded 200 in 50.4704 ms
+2025-07-09 07:30:54.874 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7032/_vs/browserLink - null null
+2025-07-09 07:30:54.874 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7032/_framework/aspnetcore-browser-refresh.js - null null
+2025-07-09 07:30:54.875 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7032/swagger/index.html - 200 null text/html;charset=utf-8 229.7286ms
+2025-07-09 07:30:54.900 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7032/_framework/aspnetcore-browser-refresh.js - 200 13762 application/javascript; charset=utf-8 26.2002ms
+2025-07-09 07:30:54.937 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7032/_vs/browserLink - 200 null text/javascript; charset=UTF-8 63.0402ms
+2025-07-09 07:30:54.967 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7032/swagger/v1/swagger.json - null null
+2025-07-09 07:30:54.976 +08:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 5.5579 ms
+2025-07-09 07:30:54.979 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7032/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 11.7955ms
+2025-07-09 07:30:59.093 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7032/api/Applicant/GetApplicant - null null
+2025-07-09 07:30:59.101 +08:00 [INF] Executing endpoint 'Hang_Fire.Api.Controllers.ApplicantController.GetApplicant (Hang-Fire.Api)'
+2025-07-09 07:30:59.121 +08:00 [INF] Route matched with {action = "GetApplicant", controller = "Applicant"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetApplicant(System.Threading.CancellationToken) on controller Hang_Fire.Api.Controllers.ApplicantController (Hang-Fire.Api).
+2025-07-09 07:30:59.182 +08:00 [INF] Executing action method Hang_Fire.Api.Controllers.ApplicantController.GetApplicant (Hang-Fire.Api) - Validation state: "Valid"
+2025-07-09 07:31:01.067 +08:00 [INF] Executed DbCommand (33ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[Email], [a].[FirstName], [a].[LastName], [a].[PositionApplying]
+FROM [Applicant] AS [a]
+2025-07-09 07:31:01.083 +08:00 [INF] Request of type GetApplicantQuery handled successfully.
+2025-07-09 07:31:01.086 +08:00 [INF] HttpGet(GetApplicant) connection successfully.
+2025-07-09 07:31:01.089 +08:00 [INF] Executed action method Hang_Fire.Api.Controllers.ApplicantController.GetApplicant (Hang-Fire.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 1903.2194ms.
+2025-07-09 07:31:01.096 +08:00 [INF] Executing OkObjectResult, writing value of type 'FluentResults.Result`1[[System.Collections.Generic.IEnumerable`1[[Hang_Fire.Application.Features.Applicants.Query.GetApplicant.GetApplicantQueryDto, Hang-Fire.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-07-09 07:31:01.117 +08:00 [INF] Executed action Hang_Fire.Api.Controllers.ApplicantController.GetApplicant (Hang-Fire.Api) in 1991.7837ms
+2025-07-09 07:31:01.118 +08:00 [INF] Executed endpoint 'Hang_Fire.Api.Controllers.ApplicantController.GetApplicant (Hang-Fire.Api)'
+2025-07-09 07:31:01.120 +08:00 [INF] HTTP GET /api/Applicant/GetApplicant responded 200 in 2021.8106 ms
+2025-07-09 07:31:01.127 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7032/api/Applicant/GetApplicant - 200 null application/json; charset=utf-8 2034.1033ms
+2025-07-09 07:31:27.762 +08:00 [INF] Request starting HTTP/2 POST https://localhost:7032/api/Applicant/CreateApplicant - application/json 171
+2025-07-09 07:31:27.778 +08:00 [INF] Executing endpoint 'Hang_Fire.Api.Controllers.ApplicantController.CreateApplicant (Hang-Fire.Api)'
+2025-07-09 07:31:27.783 +08:00 [INF] Route matched with {action = "CreateApplicant", controller = "Applicant"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateApplicant(Hang_Fire.Application.Features.Applicants.Command.CreateApplicant.CreateApplicantCommand, System.Threading.CancellationToken) on controller Hang_Fire.Api.Controllers.ApplicantController (Hang-Fire.Api).
+2025-07-09 07:31:27.819 +08:00 [INF] Executing action method Hang_Fire.Api.Controllers.ApplicantController.CreateApplicant (Hang-Fire.Api) - Validation state: "Valid"
+2025-07-09 07:31:28.032 +08:00 [INF] Executed DbCommand (2ms) [Parameters=[@__email_0='?' (Size = 255)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Applicant] AS [a]
+        WHERE [a].[Email] = @__email_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-07-09 07:31:28.046 +08:00 [INF] Request of type CreateApplicantCommand handled successfully.
+2025-07-09 07:31:28.048 +08:00 [INF] HttpPost(CreateApplicant) connection successfully.
+2025-07-09 07:31:28.049 +08:00 [INF] Executed action method Hang_Fire.Api.Controllers.ApplicantController.CreateApplicant (Hang-Fire.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 229.0559ms.
+2025-07-09 07:31:28.050 +08:00 [INF] Executing OkObjectResult, writing value of type 'FluentResults.Result`1[[System.Guid, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-07-09 07:31:28.058 +08:00 [INF] Executed action Hang_Fire.Api.Controllers.ApplicantController.CreateApplicant (Hang-Fire.Api) in 274.0662ms
+2025-07-09 07:31:28.060 +08:00 [INF] Executed endpoint 'Hang_Fire.Api.Controllers.ApplicantController.CreateApplicant (Hang-Fire.Api)'
+2025-07-09 07:31:28.061 +08:00 [ERR] HTTP POST /api/Applicant/CreateApplicant responded 500 in 283.7908 ms
+System.InvalidOperationException: Result is in status failed. Value is not set. Having: Error with Message='Try using different Email!'
+   at FluentResults.Result`1.ThrowIfFailed()
+   at ValueGetter(Object)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCore(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.SerializeAsync(PipeWriter pipeWriter, T rootValue, Int32 flushThreshold, CancellationToken cancellationToken, Object rootValueBoxed)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.SerializeAsync(PipeWriter pipeWriter, T rootValue, Int32 flushThreshold, CancellationToken cancellationToken, Object rootValueBoxed)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.SerializeAsync(PipeWriter pipeWriter, T rootValue, Int32 flushThreshold, CancellationToken cancellationToken, Object rootValueBoxed)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter.WriteResponseBodyAsync(OutputFormatterWriteContext context, Encoding selectedEncoding)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeResultAsync>g__Logged|22_0(ResourceInvoker invoker, IActionResult result)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2025-07-09 07:31:28.076 +08:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Result is in status failed. Value is not set. Having: Error with Message='Try using different Email!'
+   at FluentResults.Result`1.ThrowIfFailed()
+   at ValueGetter(Object)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCore(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.SerializeAsync(PipeWriter pipeWriter, T rootValue, Int32 flushThreshold, CancellationToken cancellationToken, Object rootValueBoxed)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.SerializeAsync(PipeWriter pipeWriter, T rootValue, Int32 flushThreshold, CancellationToken cancellationToken, Object rootValueBoxed)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.SerializeAsync(PipeWriter pipeWriter, T rootValue, Int32 flushThreshold, CancellationToken cancellationToken, Object rootValueBoxed)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter.WriteResponseBodyAsync(OutputFormatterWriteContext context, Encoding selectedEncoding)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeResultAsync>g__Logged|22_0(ResourceInvoker invoker, IActionResult result)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-07-09 07:31:28.088 +08:00 [INF] Request finished HTTP/2 POST https://localhost:7032/api/Applicant/CreateApplicant - 500 null text/plain; charset=utf-8 326.4867ms
+2025-07-09 07:33:02.912 +08:00 [INF] Request starting HTTP/2 POST https://localhost:7032/api/Applicant/CreateApplicant - application/json 171
+2025-07-09 07:33:02.924 +08:00 [INF] Executing endpoint 'Hang_Fire.Api.Controllers.ApplicantController.CreateApplicant (Hang-Fire.Api)'
+2025-07-09 07:33:02.925 +08:00 [INF] Route matched with {action = "CreateApplicant", controller = "Applicant"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateApplicant(Hang_Fire.Application.Features.Applicants.Command.CreateApplicant.CreateApplicantCommand, System.Threading.CancellationToken) on controller Hang_Fire.Api.Controllers.ApplicantController (Hang-Fire.Api).
+2025-07-09 07:33:02.938 +08:00 [INF] Executing action method Hang_Fire.Api.Controllers.ApplicantController.CreateApplicant (Hang-Fire.Api) - Validation state: "Valid"
+2025-07-09 07:33:02.957 +08:00 [INF] Executed DbCommand (7ms) [Parameters=[@__email_0='?' (Size = 255)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Applicant] AS [a]
+        WHERE [a].[Email] = @__email_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-07-09 07:33:57.485 +08:00 [INF] Request of type CreateApplicantCommand handled successfully.
+2025-07-09 07:34:17.485 +08:00 [INF] HttpPost(CreateApplicant) connection successfully.
+2025-07-09 07:34:18.784 +08:00 [INF] Executed action method Hang_Fire.Api.Controllers.ApplicantController.CreateApplicant (Hang-Fire.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 75850.8402ms.
+2025-07-09 07:34:18.786 +08:00 [INF] Executing OkObjectResult, writing value of type 'FluentResults.Result`1[[System.Guid, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-07-09 07:34:18.788 +08:00 [INF] Executed action Hang_Fire.Api.Controllers.ApplicantController.CreateApplicant (Hang-Fire.Api) in 75867.4367ms
+2025-07-09 07:34:18.789 +08:00 [INF] Executed endpoint 'Hang_Fire.Api.Controllers.ApplicantController.CreateApplicant (Hang-Fire.Api)'
+2025-07-09 07:34:18.791 +08:00 [ERR] HTTP POST /api/Applicant/CreateApplicant responded 500 in 75872.1076 ms
+System.InvalidOperationException: Result is in status failed. Value is not set. Having: Error with Message='Try using different Email!'
+   at FluentResults.Result`1.ThrowIfFailed()
+   at ValueGetter(Object)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCore(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.SerializeAsync(PipeWriter pipeWriter, T rootValue, Int32 flushThreshold, CancellationToken cancellationToken, Object rootValueBoxed)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.SerializeAsync(PipeWriter pipeWriter, T rootValue, Int32 flushThreshold, CancellationToken cancellationToken, Object rootValueBoxed)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.SerializeAsync(PipeWriter pipeWriter, T rootValue, Int32 flushThreshold, CancellationToken cancellationToken, Object rootValueBoxed)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter.WriteResponseBodyAsync(OutputFormatterWriteContext context, Encoding selectedEncoding)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeResultAsync>g__Logged|22_0(ResourceInvoker invoker, IActionResult result)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2025-07-09 07:34:18.796 +08:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Result is in status failed. Value is not set. Having: Error with Message='Try using different Email!'
+   at FluentResults.Result`1.ThrowIfFailed()
+   at ValueGetter(Object)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCore(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.SerializeAsync(PipeWriter pipeWriter, T rootValue, Int32 flushThreshold, CancellationToken cancellationToken, Object rootValueBoxed)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.SerializeAsync(PipeWriter pipeWriter, T rootValue, Int32 flushThreshold, CancellationToken cancellationToken, Object rootValueBoxed)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.SerializeAsync(PipeWriter pipeWriter, T rootValue, Int32 flushThreshold, CancellationToken cancellationToken, Object rootValueBoxed)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter.WriteResponseBodyAsync(OutputFormatterWriteContext context, Encoding selectedEncoding)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeResultAsync>g__Logged|22_0(ResourceInvoker invoker, IActionResult result)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-07-09 07:34:18.854 +08:00 [INF] Request finished HTTP/2 POST https://localhost:7032/api/Applicant/CreateApplicant - 500 null text/plain; charset=utf-8 75948.3038ms
+2025-07-09 07:34:34.043 +08:00 [INF] Execution DelayedJobScheduler recovered from the Faulted state after 00:00:16.5570047 and is in the Running state now
+2025-07-09 07:35:25.793 +08:00 [INF] Start installing Hangfire SQL objects...
+2025-07-09 07:35:27.482 +08:00 [INF] Hangfire SQL objects installed.
+2025-07-09 07:35:27.755 +08:00 [INF] Now listening on: https://localhost:7032
+2025-07-09 07:35:27.757 +08:00 [INF] Now listening on: http://localhost:5062
+2025-07-09 07:35:27.836 +08:00 [INF] Starting Hangfire Server using job storage: 'SQL Server: JEORGEOLIVER-LA\SQLEXPRESS02@HangfireDb'
+2025-07-09 07:35:27.837 +08:00 [INF] Using the following options for SQL Server job storage: Queue poll interval: 00:00:00.
+2025-07-09 07:35:27.838 +08:00 [INF] Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15
+2025-07-09 07:35:27.882 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-07-09 07:35:27.888 +08:00 [INF] Hosting environment: Development
+2025-07-09 07:35:27.890 +08:00 [INF] Content root path: C:\Users\Jeorge Oliver\source\repos\hangfire-tutorial\Hang-Fire-Tutorial\Hang-Fire.Api
+2025-07-09 07:35:28.013 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7032/swagger/index.html - null null
+2025-07-09 07:35:28.034 +08:00 [INF] Server jeorgeoliver-la:14900:80f017da successfully announced in 153.3108 ms
+2025-07-09 07:35:28.040 +08:00 [INF] Server jeorgeoliver-la:14900:80f017da is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, SqlServerHeartbeatProcess, ExpirationManager, CountersAggregator, Worker, DelayedJobScheduler, RecurringJobScheduler...
+2025-07-09 07:35:28.152 +08:00 [INF] Server jeorgeoliver-la:14900:80f017da all the dispatchers started
+2025-07-09 07:35:28.327 +08:00 [INF] HTTP GET /swagger/index.html responded 200 in 49.4828 ms
+2025-07-09 07:35:28.331 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7032/_framework/aspnetcore-browser-refresh.js - null null
+2025-07-09 07:35:28.331 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7032/_vs/browserLink - null null
+2025-07-09 07:35:28.335 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7032/swagger/index.html - 200 null text/html;charset=utf-8 327.8093ms
+2025-07-09 07:35:28.338 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7032/_framework/aspnetcore-browser-refresh.js - 200 13762 application/javascript; charset=utf-8 6.8093ms
+2025-07-09 07:35:28.372 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7032/_vs/browserLink - 200 null text/javascript; charset=UTF-8 41.058ms
+2025-07-09 07:35:28.400 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7032/swagger/v1/swagger.json - null null
+2025-07-09 07:35:28.408 +08:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 4.7133 ms
+2025-07-09 07:35:28.410 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7032/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 10.69ms
+2025-07-09 07:35:52.651 +08:00 [INF] Request starting HTTP/2 POST https://localhost:7032/api/Applicant/CreateApplicant - application/json 171
+2025-07-09 07:35:52.671 +08:00 [INF] Executing endpoint 'Hang_Fire.Api.Controllers.ApplicantController.CreateApplicant (Hang-Fire.Api)'
+2025-07-09 07:35:52.691 +08:00 [INF] Route matched with {action = "CreateApplicant", controller = "Applicant"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateApplicant(Hang_Fire.Application.Features.Applicants.Command.CreateApplicant.CreateApplicantCommand, System.Threading.CancellationToken) on controller Hang_Fire.Api.Controllers.ApplicantController (Hang-Fire.Api).
+2025-07-09 07:35:52.775 +08:00 [INF] Executing action method Hang_Fire.Api.Controllers.ApplicantController.CreateApplicant (Hang-Fire.Api) - Validation state: "Valid"
+2025-07-09 07:35:54.732 +08:00 [INF] Executed DbCommand (17ms) [Parameters=[@__email_0='?' (Size = 255)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Applicant] AS [a]
+        WHERE [a].[Email] = @__email_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-07-09 07:36:25.130 +08:00 [INF] Request of type CreateApplicantCommand handled successfully.
+2025-07-09 07:36:49.298 +08:00 [INF] HttpPost(CreateApplicant) connection successfully.
+2025-07-09 07:36:49.298 +08:00 [ERR] Execution Worker is in the Failed state now due to an exception, execution will be retried in no more than 00:00:04
+Microsoft.Data.SqlClient.SqlException (0x80131904): Connection Timeout Expired.  The timeout period elapsed while attempting to consume the pre-login handshake acknowledgement.  This could be because the pre-login handshake failed or the server was unable to respond back in time.  The duration spent while attempting to connect to this server was - [Pre-Login] initialization=25682; handshake=22; 
+ ---> System.ComponentModel.Win32Exception (258): The wait operation timed out.
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry, SqlConnectionOverrides overrides)
+   at Microsoft.Data.SqlClient.SqlConnection.Open(SqlConnectionOverrides overrides)
+   at Hangfire.SqlServer.SqlServerStorage.CreateAndOpenConnection() in C:\projects\hangfire-525\src\Hangfire.SqlServer\SqlServerStorage.cs:line 406
+   at Hangfire.SqlServer.SqlServerStorage.UseConnection[TContext,TResult](DbConnection dedicatedConnection, Func`4 func, TContext context) in C:\projects\hangfire-525\src\Hangfire.SqlServer\SqlServerStorage.cs:line 291
+   at Hangfire.SqlServer.SqlServerJobQueue.FetchJob(String[] queues) in C:\projects\hangfire-525\src\Hangfire.SqlServer\SqlServerJobQueue.cs:line 169
+   at Hangfire.SqlServer.SqlServerJobQueue.DequeueUsingSlidingInvisibilityTimeout(String[] queues, CancellationToken cancellationToken) in C:\projects\hangfire-525\src\Hangfire.SqlServer\SqlServerJobQueue.cs:line 103
+   at Hangfire.SqlServer.SqlServerJobQueue.Dequeue(String[] queues, CancellationToken cancellationToken) in C:\projects\hangfire-525\src\Hangfire.SqlServer\SqlServerJobQueue.cs:line 67
+   at Hangfire.SqlServer.SqlServerConnection.FetchNextJob(String[] queues, CancellationToken cancellationToken) in C:\projects\hangfire-525\src\Hangfire.SqlServer\SqlServerConnection.cs:line 81
+   at Hangfire.Server.Worker.Execute(BackgroundProcessContext context) in C:\projects\hangfire-525\src\Hangfire.Core\Server\Worker.cs:line 107
+   at Hangfire.Server.BackgroundProcessDispatcherBuilder.ExecuteProcess(Guid executionId, Object state) in C:\projects\hangfire-525\src\Hangfire.Core\Server\BackgroundProcessDispatcherBuilder.cs:line 82
+   at Hangfire.Processing.BackgroundExecution.Run(Action`2 callback, Object state) in C:\projects\hangfire-525\src\Hangfire.Core\Processing\BackgroundExecution.cs:line 118
+ClientConnectionId:798ce276-28b2-4c5f-b561-bb7baa0bbe3d
+Error Number:-2,State:0,Class:11
+2025-07-09 07:36:58.450 +08:00 [INF] Executed action method Hang_Fire.Api.Controllers.ApplicantController.CreateApplicant (Hang-Fire.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 65675.1969ms.
+2025-07-09 07:36:58.476 +08:00 [INF] Executing OkObjectResult, writing value of type 'FluentResults.Result`1[[System.Guid, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-07-09 07:36:58.489 +08:00 [INF] Executed action Hang_Fire.Api.Controllers.ApplicantController.CreateApplicant (Hang-Fire.Api) in 65798.2336ms
+2025-07-09 07:36:58.491 +08:00 [INF] Executed endpoint 'Hang_Fire.Api.Controllers.ApplicantController.CreateApplicant (Hang-Fire.Api)'
+2025-07-09 07:36:58.493 +08:00 [ERR] HTTP POST /api/Applicant/CreateApplicant responded 500 in 65829.9690 ms
+System.InvalidOperationException: Result is in status failed. Value is not set. Having: Error with Message='Try using different Email!'
+   at FluentResults.Result`1.ThrowIfFailed()
+   at ValueGetter(Object)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCore(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.SerializeAsync(PipeWriter pipeWriter, T rootValue, Int32 flushThreshold, CancellationToken cancellationToken, Object rootValueBoxed)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.SerializeAsync(PipeWriter pipeWriter, T rootValue, Int32 flushThreshold, CancellationToken cancellationToken, Object rootValueBoxed)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.SerializeAsync(PipeWriter pipeWriter, T rootValue, Int32 flushThreshold, CancellationToken cancellationToken, Object rootValueBoxed)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter.WriteResponseBodyAsync(OutputFormatterWriteContext context, Encoding selectedEncoding)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeResultAsync>g__Logged|22_0(ResourceInvoker invoker, IActionResult result)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2025-07-09 07:36:58.503 +08:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Result is in status failed. Value is not set. Having: Error with Message='Try using different Email!'
+   at FluentResults.Result`1.ThrowIfFailed()
+   at ValueGetter(Object)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCore(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.SerializeAsync(PipeWriter pipeWriter, T rootValue, Int32 flushThreshold, CancellationToken cancellationToken, Object rootValueBoxed)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.SerializeAsync(PipeWriter pipeWriter, T rootValue, Int32 flushThreshold, CancellationToken cancellationToken, Object rootValueBoxed)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.SerializeAsync(PipeWriter pipeWriter, T rootValue, Int32 flushThreshold, CancellationToken cancellationToken, Object rootValueBoxed)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter.WriteResponseBodyAsync(OutputFormatterWriteContext context, Encoding selectedEncoding)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeResultAsync>g__Logged|22_0(ResourceInvoker invoker, IActionResult result)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-07-09 07:36:58.585 +08:00 [INF] Request finished HTTP/2 POST https://localhost:7032/api/Applicant/CreateApplicant - 500 null text/plain; charset=utf-8 65938.4384ms
+2025-07-09 07:37:13.643 +08:00 [INF] Execution DelayedJobScheduler recovered from the Faulted state after 00:00:24.3461134 and is in the Running state now
+2025-07-09 07:40:28.072 +08:00 [INF] 1 servers were removed due to timeout
+2025-07-09 07:40:53.173 +08:00 [INF] Request starting HTTP/2 POST https://localhost:7032/api/Applicant/CreateApplicant - application/json 171
+2025-07-09 07:40:53.182 +08:00 [INF] Executing endpoint 'Hang_Fire.Api.Controllers.ApplicantController.CreateApplicant (Hang-Fire.Api)'
+2025-07-09 07:40:53.183 +08:00 [INF] Route matched with {action = "CreateApplicant", controller = "Applicant"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateApplicant(Hang_Fire.Application.Features.Applicants.Command.CreateApplicant.CreateApplicantCommand, System.Threading.CancellationToken) on controller Hang_Fire.Api.Controllers.ApplicantController (Hang-Fire.Api).
+2025-07-09 07:40:53.198 +08:00 [INF] Executing action method Hang_Fire.Api.Controllers.ApplicantController.CreateApplicant (Hang-Fire.Api) - Validation state: "Valid"
+2025-07-09 07:40:53.238 +08:00 [INF] Executed DbCommand (4ms) [Parameters=[@__email_0='?' (Size = 255)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Applicant] AS [a]
+        WHERE [a].[Email] = @__email_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-07-09 07:40:56.527 +08:00 [INF] Request of type CreateApplicantCommand handled successfully.
+2025-07-09 07:40:56.528 +08:00 [INF] HttpPost(CreateApplicant) connection successfully.
+2025-07-09 07:40:56.529 +08:00 [INF] Executed action method Hang_Fire.Api.Controllers.ApplicantController.CreateApplicant (Hang-Fire.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 3330.1838ms.
+2025-07-09 07:40:56.531 +08:00 [INF] Executing OkObjectResult, writing value of type 'FluentResults.Result`1[[System.Guid, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-07-09 07:40:56.534 +08:00 [INF] Executed action Hang_Fire.Api.Controllers.ApplicantController.CreateApplicant (Hang-Fire.Api) in 3349.1494ms
+2025-07-09 07:40:56.535 +08:00 [INF] Executed endpoint 'Hang_Fire.Api.Controllers.ApplicantController.CreateApplicant (Hang-Fire.Api)'
+2025-07-09 07:40:56.537 +08:00 [ERR] HTTP POST /api/Applicant/CreateApplicant responded 500 in 3354.9617 ms
+System.InvalidOperationException: Result is in status failed. Value is not set. Having: Error with Message='Try using different Email!'
+   at FluentResults.Result`1.ThrowIfFailed()
+   at ValueGetter(Object)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCore(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.SerializeAsync(PipeWriter pipeWriter, T rootValue, Int32 flushThreshold, CancellationToken cancellationToken, Object rootValueBoxed)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.SerializeAsync(PipeWriter pipeWriter, T rootValue, Int32 flushThreshold, CancellationToken cancellationToken, Object rootValueBoxed)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.SerializeAsync(PipeWriter pipeWriter, T rootValue, Int32 flushThreshold, CancellationToken cancellationToken, Object rootValueBoxed)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter.WriteResponseBodyAsync(OutputFormatterWriteContext context, Encoding selectedEncoding)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeResultAsync>g__Logged|22_0(ResourceInvoker invoker, IActionResult result)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2025-07-09 07:40:56.548 +08:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Result is in status failed. Value is not set. Having: Error with Message='Try using different Email!'
+   at FluentResults.Result`1.ThrowIfFailed()
+   at ValueGetter(Object)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCore(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.SerializeAsync(PipeWriter pipeWriter, T rootValue, Int32 flushThreshold, CancellationToken cancellationToken, Object rootValueBoxed)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.SerializeAsync(PipeWriter pipeWriter, T rootValue, Int32 flushThreshold, CancellationToken cancellationToken, Object rootValueBoxed)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.SerializeAsync(PipeWriter pipeWriter, T rootValue, Int32 flushThreshold, CancellationToken cancellationToken, Object rootValueBoxed)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter.WriteResponseBodyAsync(OutputFormatterWriteContext context, Encoding selectedEncoding)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeResultAsync>g__Logged|22_0(ResourceInvoker invoker, IActionResult result)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-07-09 07:40:56.557 +08:00 [INF] Request finished HTTP/2 POST https://localhost:7032/api/Applicant/CreateApplicant - 500 null text/plain; charset=utf-8 3384.2553ms
+2025-07-09 07:40:57.586 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7032/swagger/index.html - null null
+2025-07-09 07:40:57.624 +08:00 [INF] HTTP GET /swagger/index.html responded 200 in 3.3801 ms
+2025-07-09 07:40:57.626 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7032/swagger/index.html - 200 null text/html;charset=utf-8 40.2682ms
+2025-07-09 07:40:57.630 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7032/_framework/aspnetcore-browser-refresh.js - null null
+2025-07-09 07:40:57.630 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7032/_vs/browserLink - null null
+2025-07-09 07:40:57.633 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7032/_framework/aspnetcore-browser-refresh.js - 200 13762 application/javascript; charset=utf-8 3.211ms
+2025-07-09 07:40:57.661 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7032/_vs/browserLink - 200 null text/javascript; charset=UTF-8 30.8015ms
+2025-07-09 07:40:57.686 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7032/swagger/v1/swagger.json - null null
+2025-07-09 07:40:57.691 +08:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 2.7595 ms
+2025-07-09 07:40:57.693 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7032/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 7.792ms
+2025-07-09 07:41:35.482 +08:00 [INF] Request starting HTTP/2 POST https://localhost:7032/api/Applicant/CreateApplicant - application/json 171
+2025-07-09 07:41:35.507 +08:00 [INF] Executing endpoint 'Hang_Fire.Api.Controllers.ApplicantController.CreateApplicant (Hang-Fire.Api)'
+2025-07-09 07:41:35.511 +08:00 [INF] Route matched with {action = "CreateApplicant", controller = "Applicant"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateApplicant(Hang_Fire.Application.Features.Applicants.Command.CreateApplicant.CreateApplicantCommand, System.Threading.CancellationToken) on controller Hang_Fire.Api.Controllers.ApplicantController (Hang-Fire.Api).
+2025-07-09 07:41:35.526 +08:00 [INF] Executing action method Hang_Fire.Api.Controllers.ApplicantController.CreateApplicant (Hang-Fire.Api) - Validation state: "Valid"
+2025-07-09 07:41:42.344 +08:00 [INF] Executed DbCommand (3ms) [Parameters=[@__email_0='?' (Size = 255)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Applicant] AS [a]
+        WHERE [a].[Email] = @__email_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-07-09 07:42:32.600 +08:00 [INF] Request of type CreateApplicantCommand handled successfully.
+2025-07-09 07:44:00.727 +08:00 [INF] HttpPost(CreateApplicant) connection successfully.
+2025-07-09 07:44:04.126 +08:00 [INF] Executed action method Hang_Fire.Api.Controllers.ApplicantController.CreateApplicant (Hang-Fire.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 148606.9545ms.
+2025-07-09 07:44:04.128 +08:00 [INF] Executing OkObjectResult, writing value of type 'FluentResults.Result`1[[System.Guid, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-07-09 07:44:04.132 +08:00 [INF] Executed action Hang_Fire.Api.Controllers.ApplicantController.CreateApplicant (Hang-Fire.Api) in 148628.1871ms
+2025-07-09 07:44:04.134 +08:00 [INF] Executed endpoint 'Hang_Fire.Api.Controllers.ApplicantController.CreateApplicant (Hang-Fire.Api)'
+2025-07-09 07:44:04.135 +08:00 [ERR] HTTP POST /api/Applicant/CreateApplicant responded 500 in 148636.3282 ms
+System.InvalidOperationException: Result is in status failed. Value is not set. Having: Error with Message='Try using different Email!'
+   at FluentResults.Result`1.ThrowIfFailed()
+   at ValueGetter(Object)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCore(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.SerializeAsync(PipeWriter pipeWriter, T rootValue, Int32 flushThreshold, CancellationToken cancellationToken, Object rootValueBoxed)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.SerializeAsync(PipeWriter pipeWriter, T rootValue, Int32 flushThreshold, CancellationToken cancellationToken, Object rootValueBoxed)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.SerializeAsync(PipeWriter pipeWriter, T rootValue, Int32 flushThreshold, CancellationToken cancellationToken, Object rootValueBoxed)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter.WriteResponseBodyAsync(OutputFormatterWriteContext context, Encoding selectedEncoding)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeResultAsync>g__Logged|22_0(ResourceInvoker invoker, IActionResult result)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2025-07-09 07:44:04.141 +08:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Result is in status failed. Value is not set. Having: Error with Message='Try using different Email!'
+   at FluentResults.Result`1.ThrowIfFailed()
+   at ValueGetter(Object)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCore(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.SerializeAsync(PipeWriter pipeWriter, T rootValue, Int32 flushThreshold, CancellationToken cancellationToken, Object rootValueBoxed)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.SerializeAsync(PipeWriter pipeWriter, T rootValue, Int32 flushThreshold, CancellationToken cancellationToken, Object rootValueBoxed)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.SerializeAsync(PipeWriter pipeWriter, T rootValue, Int32 flushThreshold, CancellationToken cancellationToken, Object rootValueBoxed)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter.WriteResponseBodyAsync(OutputFormatterWriteContext context, Encoding selectedEncoding)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeResultAsync>g__Logged|22_0(ResourceInvoker invoker, IActionResult result)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-07-09 07:44:04.147 +08:00 [INF] Request finished HTTP/2 POST https://localhost:7032/api/Applicant/CreateApplicant - 500 null text/plain; charset=utf-8 148674.039ms
+2025-07-09 07:45:54.099 +08:00 [INF] Start installing Hangfire SQL objects...
+2025-07-09 07:45:55.796 +08:00 [INF] Hangfire SQL objects installed.
+2025-07-09 07:45:56.033 +08:00 [INF] Now listening on: https://localhost:7032
+2025-07-09 07:45:56.034 +08:00 [INF] Now listening on: http://localhost:5062
+2025-07-09 07:45:56.104 +08:00 [INF] Starting Hangfire Server using job storage: 'SQL Server: JEORGEOLIVER-LA\SQLEXPRESS02@HangfireDb'
+2025-07-09 07:45:56.105 +08:00 [INF] Using the following options for SQL Server job storage: Queue poll interval: 00:00:00.
+2025-07-09 07:45:56.106 +08:00 [INF] Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15
+2025-07-09 07:45:56.121 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-07-09 07:45:56.122 +08:00 [INF] Hosting environment: Development
+2025-07-09 07:45:56.126 +08:00 [INF] Content root path: C:\Users\Jeorge Oliver\source\repos\hangfire-tutorial\Hang-Fire-Tutorial\Hang-Fire.Api
+2025-07-09 07:45:56.207 +08:00 [INF] Server jeorgeoliver-la:22440:5e977ab4 successfully announced in 86.2799 ms
+2025-07-09 07:45:56.212 +08:00 [INF] Server jeorgeoliver-la:22440:5e977ab4 is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, SqlServerHeartbeatProcess, ExpirationManager, CountersAggregator, Worker, DelayedJobScheduler, RecurringJobScheduler...
+2025-07-09 07:45:56.272 +08:00 [INF] Server jeorgeoliver-la:22440:5e977ab4 all the dispatchers started
+2025-07-09 07:45:56.591 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7032/swagger/index.html - null null
+2025-07-09 07:45:56.802 +08:00 [INF] HTTP GET /swagger/index.html responded 200 in 67.6506 ms
+2025-07-09 07:45:56.811 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7032/_vs/browserLink - null null
+2025-07-09 07:45:56.811 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7032/_framework/aspnetcore-browser-refresh.js - null null
+2025-07-09 07:45:56.814 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7032/swagger/index.html - 200 null text/html;charset=utf-8 226.8729ms
+2025-07-09 07:45:56.846 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7032/_framework/aspnetcore-browser-refresh.js - 200 13762 application/javascript; charset=utf-8 35.5497ms
+2025-07-09 07:45:56.883 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7032/_vs/browserLink - 200 null text/javascript; charset=UTF-8 72.286ms
+2025-07-09 07:45:56.915 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7032/swagger/v1/swagger.json - null null
+2025-07-09 07:45:56.924 +08:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 4.7490 ms
+2025-07-09 07:45:56.927 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7032/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 11.634ms
+2025-07-09 07:46:17.229 +08:00 [INF] Request starting HTTP/2 POST https://localhost:7032/api/Applicant/CreateApplicant - application/json 152
+2025-07-09 07:46:17.240 +08:00 [INF] Executing endpoint 'Hang_Fire.Api.Controllers.ApplicantController.CreateApplicant (Hang-Fire.Api)'
+2025-07-09 07:46:17.266 +08:00 [INF] Route matched with {action = "CreateApplicant", controller = "Applicant"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateApplicant(Hang_Fire.Application.Features.Applicants.Command.CreateApplicant.CreateApplicantCommand, System.Threading.CancellationToken) on controller Hang_Fire.Api.Controllers.ApplicantController (Hang-Fire.Api).
+2025-07-09 07:46:17.341 +08:00 [INF] Executing action method Hang_Fire.Api.Controllers.ApplicantController.CreateApplicant (Hang-Fire.Api) - Validation state: "Valid"
+2025-07-09 07:46:18.850 +08:00 [INF] Executed DbCommand (15ms) [Parameters=[@__email_0='?' (Size = 255)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Applicant] AS [a]
+        WHERE [a].[Email] = @__email_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-07-09 07:46:18.867 +08:00 [INF] Request of type CreateApplicantCommand handled successfully.
+2025-07-09 07:46:37.307 +08:00 [ERR] Throw BadRequest Exception: 
+2025-07-09 07:46:51.301 +08:00 [INF] Executed action method Hang_Fire.Api.Controllers.ApplicantController.CreateApplicant (Hang-Fire.Api), returned result Microsoft.AspNetCore.Mvc.BadRequestObjectResult in 33957.0486ms.
+2025-07-09 07:46:51.308 +08:00 [INF] Executing BadRequestObjectResult, writing value of type 'System.String'.
+2025-07-09 07:46:51.313 +08:00 [INF] Executed action Hang_Fire.Api.Controllers.ApplicantController.CreateApplicant (Hang-Fire.Api) in 34044.7476ms
+2025-07-09 07:46:51.314 +08:00 [INF] Executed endpoint 'Hang_Fire.Api.Controllers.ApplicantController.CreateApplicant (Hang-Fire.Api)'
+2025-07-09 07:46:51.316 +08:00 [INF] HTTP POST /api/Applicant/CreateApplicant responded 400 in 34081.2426 ms
+2025-07-09 07:46:51.322 +08:00 [INF] Request finished HTTP/2 POST https://localhost:7032/api/Applicant/CreateApplicant - 400 0 text/plain; charset=utf-8 34095.211ms
+2025-07-09 07:47:22.955 +08:00 [INF] Request starting HTTP/2 POST https://localhost:7032/api/Applicant/CreateApplicant - application/json 152
+2025-07-09 07:47:22.958 +08:00 [INF] Executing endpoint 'Hang_Fire.Api.Controllers.ApplicantController.CreateApplicant (Hang-Fire.Api)'
+2025-07-09 07:47:22.960 +08:00 [INF] Route matched with {action = "CreateApplicant", controller = "Applicant"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateApplicant(Hang_Fire.Application.Features.Applicants.Command.CreateApplicant.CreateApplicantCommand, System.Threading.CancellationToken) on controller Hang_Fire.Api.Controllers.ApplicantController (Hang-Fire.Api).
+2025-07-09 07:47:22.974 +08:00 [INF] Executing action method Hang_Fire.Api.Controllers.ApplicantController.CreateApplicant (Hang-Fire.Api) - Validation state: "Valid"
+2025-07-09 07:47:23.017 +08:00 [INF] Executed DbCommand (3ms) [Parameters=[@__email_0='?' (Size = 255)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Applicant] AS [a]
+        WHERE [a].[Email] = @__email_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-07-09 07:47:23.019 +08:00 [INF] Request of type CreateApplicantCommand handled successfully.
+2025-07-09 07:48:10.103 +08:00 [ERR] Throw BadRequest Exception: 
+2025-07-09 07:48:11.196 +08:00 [INF] Executed action method Hang_Fire.Api.Controllers.ApplicantController.CreateApplicant (Hang-Fire.Api), returned result Microsoft.AspNetCore.Mvc.BadRequestObjectResult in 48222.3905ms.
+2025-07-09 07:48:11.198 +08:00 [INF] Executing BadRequestObjectResult, writing value of type 'System.String'.
+2025-07-09 07:48:11.199 +08:00 [INF] Executed action Hang_Fire.Api.Controllers.ApplicantController.CreateApplicant (Hang-Fire.Api) in 48240.1386ms
+2025-07-09 07:48:11.199 +08:00 [INF] Executed endpoint 'Hang_Fire.Api.Controllers.ApplicantController.CreateApplicant (Hang-Fire.Api)'
+2025-07-09 07:48:11.200 +08:00 [INF] HTTP POST /api/Applicant/CreateApplicant responded 400 in 48244.5172 ms
+2025-07-09 07:48:11.202 +08:00 [INF] Request finished HTTP/2 POST https://localhost:7032/api/Applicant/CreateApplicant - 400 0 text/plain; charset=utf-8 48249.8051ms
+2025-07-09 07:48:27.237 +08:00 [INF] Execution RecurringJobScheduler recovered from the Faulted state after 00:00:16.0400663 and is in the Running state now
+2025-07-09 07:50:56.228 +08:00 [INF] 1 servers were removed due to timeout
+2025-07-09 07:51:46.166 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7032/swagger/index.html - null null
+2025-07-09 07:51:46.201 +08:00 [INF] HTTP GET /swagger/index.html responded 200 in 3.0380 ms
+2025-07-09 07:51:46.209 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7032/_framework/aspnetcore-browser-refresh.js - null null
+2025-07-09 07:51:46.209 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7032/swagger/index.html - 200 null text/html;charset=utf-8 43.9662ms
+2025-07-09 07:51:46.209 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7032/_vs/browserLink - null null
+2025-07-09 07:51:46.220 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7032/_framework/aspnetcore-browser-refresh.js - 200 13762 application/javascript; charset=utf-8 11.1384ms
+2025-07-09 07:51:46.237 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7032/_vs/browserLink - 200 null text/javascript; charset=UTF-8 28.6573ms
+2025-07-09 07:51:46.275 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7032/swagger/v1/swagger.json - null null
+2025-07-09 07:51:46.280 +08:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 2.5636 ms
+2025-07-09 07:51:46.282 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7032/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 6.5922ms
+2025-07-09 07:51:55.926 +08:00 [INF] Request starting HTTP/2 POST https://localhost:7032/api/Applicant/CreateApplicant - application/json 152
+2025-07-09 07:51:55.930 +08:00 [INF] Executing endpoint 'Hang_Fire.Api.Controllers.ApplicantController.CreateApplicant (Hang-Fire.Api)'
+2025-07-09 07:51:55.937 +08:00 [INF] Route matched with {action = "CreateApplicant", controller = "Applicant"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateApplicant(Hang_Fire.Application.Features.Applicants.Command.CreateApplicant.CreateApplicantCommand, System.Threading.CancellationToken) on controller Hang_Fire.Api.Controllers.ApplicantController (Hang-Fire.Api).
+2025-07-09 07:51:55.953 +08:00 [INF] Executing action method Hang_Fire.Api.Controllers.ApplicantController.CreateApplicant (Hang-Fire.Api) - Validation state: "Valid"
+2025-07-09 07:51:55.968 +08:00 [INF] Executed DbCommand (3ms) [Parameters=[@__email_0='?' (Size = 255)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Applicant] AS [a]
+        WHERE [a].[Email] = @__email_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-07-09 07:51:55.970 +08:00 [INF] Request of type CreateApplicantCommand handled successfully.
+2025-07-09 07:52:10.786 +08:00 [ERR] Throw BadRequest Exception: Error with Message='Invalid email format!'
+2025-07-09 07:52:14.289 +08:00 [INF] Executed action method Hang_Fire.Api.Controllers.ApplicantController.CreateApplicant (Hang-Fire.Api), returned result Microsoft.AspNetCore.Mvc.BadRequestObjectResult in 18335.9667ms.
+2025-07-09 07:52:14.290 +08:00 [INF] Executing BadRequestObjectResult, writing value of type 'System.String'.
+2025-07-09 07:52:14.291 +08:00 [INF] Executed action Hang_Fire.Api.Controllers.ApplicantController.CreateApplicant (Hang-Fire.Api) in 18354.0637ms
+2025-07-09 07:52:14.292 +08:00 [INF] Executed endpoint 'Hang_Fire.Api.Controllers.ApplicantController.CreateApplicant (Hang-Fire.Api)'
+2025-07-09 07:52:14.293 +08:00 [INF] HTTP POST /api/Applicant/CreateApplicant responded 400 in 18364.2474 ms
+2025-07-09 07:52:14.294 +08:00 [INF] Request finished HTTP/2 POST https://localhost:7032/api/Applicant/CreateApplicant - 400 null text/plain; charset=utf-8 18369.8182ms
+2025-07-09 08:14:47.979 +08:00 [INF] Start installing Hangfire SQL objects...
+2025-07-09 08:14:49.628 +08:00 [INF] Hangfire SQL objects installed.
+2025-07-09 08:14:49.909 +08:00 [INF] Now listening on: https://localhost:7032
+2025-07-09 08:14:49.910 +08:00 [INF] Now listening on: http://localhost:5062
+2025-07-09 08:14:49.978 +08:00 [INF] Starting Hangfire Server using job storage: 'SQL Server: JEORGEOLIVER-LA\SQLEXPRESS02@HangfireDb'
+2025-07-09 08:14:49.979 +08:00 [INF] Using the following options for SQL Server job storage: Queue poll interval: 00:00:00.
+2025-07-09 08:14:49.980 +08:00 [INF] Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15
+2025-07-09 08:14:50.017 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-07-09 08:14:50.023 +08:00 [INF] Hosting environment: Development
+2025-07-09 08:14:50.024 +08:00 [INF] Content root path: C:\Users\Jeorge Oliver\source\repos\hangfire-tutorial\Hang-Fire-Tutorial\Hang-Fire.Api
+2025-07-09 08:14:50.104 +08:00 [INF] Server jeorgeoliver-la:13856:13b3d237 successfully announced in 87.648 ms
+2025-07-09 08:14:50.108 +08:00 [INF] Server jeorgeoliver-la:13856:13b3d237 is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, SqlServerHeartbeatProcess, ExpirationManager, CountersAggregator, Worker, DelayedJobScheduler, RecurringJobScheduler...
+2025-07-09 08:14:50.135 +08:00 [INF] 1 servers were removed due to timeout
+2025-07-09 08:14:50.189 +08:00 [INF] Server jeorgeoliver-la:13856:13b3d237 all the dispatchers started
+2025-07-09 08:14:50.544 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7032/swagger/index.html - null null
+2025-07-09 08:14:50.752 +08:00 [INF] HTTP GET /swagger/index.html responded 200 in 54.0335 ms
+2025-07-09 08:14:50.757 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7032/_framework/aspnetcore-browser-refresh.js - null null
+2025-07-09 08:14:50.757 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7032/_vs/browserLink - null null
+2025-07-09 08:14:50.759 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7032/swagger/index.html - 200 null text/html;charset=utf-8 222.0961ms
+2025-07-09 08:14:50.776 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7032/_framework/aspnetcore-browser-refresh.js - 200 13762 application/javascript; charset=utf-8 19.5491ms
+2025-07-09 08:14:50.805 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7032/_vs/browserLink - 200 null text/javascript; charset=UTF-8 48.6211ms
+2025-07-09 08:14:50.907 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7032/swagger/v1/swagger.json - null null
+2025-07-09 08:14:50.915 +08:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 5.1464 ms
+2025-07-09 08:14:50.918 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7032/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 11.1352ms
+2025-07-09 08:14:57.882 +08:00 [INF] Request starting HTTP/2 POST https://localhost:7032/api/Applicant/CreateApplicant - application/json 152
+2025-07-09 08:14:57.892 +08:00 [INF] Executing endpoint 'Hang_Fire.Api.Controllers.ApplicantController.CreateApplicant (Hang-Fire.Api)'
+2025-07-09 08:14:57.913 +08:00 [INF] Route matched with {action = "CreateApplicant", controller = "Applicant"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateApplicant(Hang_Fire.Application.Features.Applicants.Command.CreateApplicant.CreateApplicantCommand, System.Threading.CancellationToken) on controller Hang_Fire.Api.Controllers.ApplicantController (Hang-Fire.Api).
+2025-07-09 08:14:57.996 +08:00 [INF] Executing action method Hang_Fire.Api.Controllers.ApplicantController.CreateApplicant (Hang-Fire.Api) - Validation state: "Valid"
+2025-07-09 08:14:59.959 +08:00 [INF] Executed DbCommand (31ms) [Parameters=[@__email_0='?' (Size = 255)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Applicant] AS [a]
+        WHERE [a].[Email] = @__email_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-07-09 08:14:59.977 +08:00 [INF] Request of type CreateApplicantCommand handled successfully.
+2025-07-09 08:16:06.617 +08:00 [ERR] Throw BadRequest Exception: Invalid email format!
+2025-07-09 08:16:11.993 +08:00 [INF] Executed action method Hang_Fire.Api.Controllers.ApplicantController.CreateApplicant (Hang-Fire.Api), returned result Microsoft.AspNetCore.Mvc.BadRequestObjectResult in 73994.5816ms.
+2025-07-09 08:16:11.999 +08:00 [INF] Executing BadRequestObjectResult, writing value of type 'System.String'.
+2025-07-09 08:16:12.003 +08:00 [INF] Executed action Hang_Fire.Api.Controllers.ApplicantController.CreateApplicant (Hang-Fire.Api) in 74087.7242ms
+2025-07-09 08:16:12.005 +08:00 [INF] Executed endpoint 'Hang_Fire.Api.Controllers.ApplicantController.CreateApplicant (Hang-Fire.Api)'
+2025-07-09 08:16:12.006 +08:00 [INF] HTTP POST /api/Applicant/CreateApplicant responded 400 in 74119.6248 ms
+2025-07-09 08:16:12.012 +08:00 [INF] Request finished HTTP/2 POST https://localhost:7032/api/Applicant/CreateApplicant - 400 null text/plain; charset=utf-8 74133.2803ms
+2025-07-09 08:16:23.798 +08:00 [INF] Execution DelayedJobScheduler recovered from the Faulted state after 00:00:17.1959864 and is in the Running state now
+2025-07-09 08:17:08.173 +08:00 [INF] Request starting HTTP/2 POST https://localhost:7032/api/Applicant/CreateApplicant - application/json 165
+2025-07-09 08:17:08.189 +08:00 [INF] Executing endpoint 'Hang_Fire.Api.Controllers.ApplicantController.CreateApplicant (Hang-Fire.Api)'
+2025-07-09 08:17:08.192 +08:00 [INF] Route matched with {action = "CreateApplicant", controller = "Applicant"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateApplicant(Hang_Fire.Application.Features.Applicants.Command.CreateApplicant.CreateApplicantCommand, System.Threading.CancellationToken) on controller Hang_Fire.Api.Controllers.ApplicantController (Hang-Fire.Api).
+2025-07-09 08:17:08.220 +08:00 [INF] Executing action method Hang_Fire.Api.Controllers.ApplicantController.CreateApplicant (Hang-Fire.Api) - Validation state: "Valid"
+2025-07-09 08:17:08.261 +08:00 [INF] Executed DbCommand (4ms) [Parameters=[@__email_0='?' (Size = 255)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Applicant] AS [a]
+        WHERE [a].[Email] = @__email_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-07-09 08:17:08.365 +08:00 [INF] Executed DbCommand (3ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (Size = 255), @p2='?' (Size = 100), @p3='?' (Size = 100), @p4='?' (Size = 100)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Applicant] ([Id], [Email], [FirstName], [LastName], [PositionApplying])
+VALUES (@p0, @p1, @p2, @p3, @p4);
+2025-07-09 08:17:08.479 +08:00 [INF] Background Email with parameter oliverosyuki@gmail.com has been enqueued.
+2025-07-09 08:17:08.484 +08:00 [INF] Background Notification with parameter 23 has been enqueued.
+2025-07-09 08:17:08.485 +08:00 [INF] Request of type CreateApplicantCommand handled successfully.
+2025-07-09 08:17:13.251 +08:00 [INF] HttpPost(CreateApplicant) connection successfully.
+2025-07-09 08:17:24.263 +08:00 [INF] Executed action method Hang_Fire.Api.Controllers.ApplicantController.CreateApplicant (Hang-Fire.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 16041.9856ms.
+2025-07-09 08:17:24.264 +08:00 [INF] Executing OkObjectResult, writing value of type 'FluentResults.Result`1[[System.Guid, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-07-09 08:17:24.272 +08:00 [INF] Executed action Hang_Fire.Api.Controllers.ApplicantController.CreateApplicant (Hang-Fire.Api) in 16079.4731ms
+2025-07-09 08:17:24.274 +08:00 [INF] Executed endpoint 'Hang_Fire.Api.Controllers.ApplicantController.CreateApplicant (Hang-Fire.Api)'
+2025-07-09 08:17:24.275 +08:00 [INF] HTTP POST /api/Applicant/CreateApplicant responded 200 in 16086.4158 ms
+2025-07-09 08:17:24.276 +08:00 [INF] Request finished HTTP/2 POST https://localhost:7032/api/Applicant/CreateApplicant - 200 null application/json; charset=utf-8 16104.3417ms
+2025-07-09 08:17:34.393 +08:00 [INF] [Background] Sent an Confirmation Email to oliverosyuki@gmail.com 
+2025-07-09 08:17:34.406 +08:00 [INF] [Background] Sent an Notification Email to 23
+2025-07-09 08:18:43.980 +08:00 [INF] Request starting HTTP/2 GET https://localhost:7032/api/Applicant/GetApplicant - null null
+2025-07-09 08:18:43.991 +08:00 [INF] Executing endpoint 'Hang_Fire.Api.Controllers.ApplicantController.GetApplicant (Hang-Fire.Api)'
+2025-07-09 08:18:43.995 +08:00 [INF] Route matched with {action = "GetApplicant", controller = "Applicant"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetApplicant(System.Threading.CancellationToken) on controller Hang_Fire.Api.Controllers.ApplicantController (Hang-Fire.Api).
+2025-07-09 08:18:44.009 +08:00 [INF] Executing action method Hang_Fire.Api.Controllers.ApplicantController.GetApplicant (Hang-Fire.Api) - Validation state: "Valid"
+2025-07-09 08:18:44.045 +08:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[Email], [a].[FirstName], [a].[LastName], [a].[PositionApplying]
+FROM [Applicant] AS [a]
+2025-07-09 08:18:46.443 +08:00 [INF] Request of type GetApplicantQuery handled successfully.
+2025-07-09 08:18:50.423 +08:00 [INF] HttpPost(CreateApplicant) connection successfully.
+2025-07-09 08:18:52.735 +08:00 [INF] Executed action method Hang_Fire.Api.Controllers.ApplicantController.GetApplicant (Hang-Fire.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 8724.6875ms.
+2025-07-09 08:18:52.737 +08:00 [INF] Executing OkObjectResult, writing value of type 'FluentResults.Result`1[[System.Collections.Generic.IEnumerable`1[[Hang_Fire.Application.Features.Applicants.Query.GetApplicant.GetApplicantQueryDto, Hang-Fire.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-07-09 08:18:52.747 +08:00 [INF] Executed action Hang_Fire.Api.Controllers.ApplicantController.GetApplicant (Hang-Fire.Api) in 8750.6468ms
+2025-07-09 08:18:52.749 +08:00 [INF] Executed endpoint 'Hang_Fire.Api.Controllers.ApplicantController.GetApplicant (Hang-Fire.Api)'
+2025-07-09 08:18:52.749 +08:00 [INF] HTTP GET /api/Applicant/GetApplicant responded 200 in 8758.7828 ms
+2025-07-09 08:18:52.751 +08:00 [INF] Request finished HTTP/2 GET https://localhost:7032/api/Applicant/GetApplicant - 200 null application/json; charset=utf-8 8772.3433ms
