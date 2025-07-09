@@ -12,9 +12,9 @@ namespace Hang_Fire.Api.Controllers
         private readonly ICatClient _catClient;
         private readonly IJokeClient _jokeClient;
         private readonly IKanyeClient _kanyeClient;
-        private readonly IApiService _apiService;
+        private readonly IProcessApiClient _apiService;
 
-        public HttpClientController(ICatClient catClient, IJokeClient jokeClient, IKanyeClient kanyeClient, IApiService apiService)
+        public HttpClientController(ICatClient catClient, IJokeClient jokeClient, IKanyeClient kanyeClient, IProcessApiClient apiService)
         {
             _catClient = catClient;
             _jokeClient = jokeClient;

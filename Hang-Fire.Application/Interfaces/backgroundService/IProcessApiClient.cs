@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Hang_Fire.Application.Interfaces.backgroundService
 {
-    public interface IApiService
+    public interface IProcessApiClient
     {
         Task GetDataAsync(IApiClient apiClient);
     }

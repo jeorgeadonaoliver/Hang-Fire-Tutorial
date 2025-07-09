@@ -13,11 +13,12 @@ public class KanyeClient : IKanyeClient
 
     public async Task<string> GetDataAsync()
     {
+        await Task.Delay(10000);
         var response = await _httpClient.GetAsync("https://api.kanye.rest");
         response.EnsureSuccessStatusCode();
 
         var data = await response.Content.ReadAsStringAsync();
-        Console.WriteLine("Kanye Api client Service Rendered: ", data);
+        Console.WriteLine($"Kanye Api client Service Rendered: {data}");
         return data;
     }
 }

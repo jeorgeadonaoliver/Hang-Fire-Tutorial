@@ -14,6 +14,7 @@ public class CatApiClient : ICatClient
 
     public async Task<string> GetDataAsync()
     {
+        await Task.Delay(10000);
         var response = await _httpClient.GetAsync("https://catfact.ninja/fact");
         response.EnsureSuccessStatusCode();
 

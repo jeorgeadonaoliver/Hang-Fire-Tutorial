@@ -4,12 +4,12 @@ using Hangfire;
 
 namespace Hang_Fire.Job.ApiClient
 {
-    public class ProcessApiClient : IApiService
+    public class ProcessApiClient : IProcessApiClient
     {
-        public async Task GetDataAsync(IApiClient apiClient)
+        public Task GetDataAsync(IApiClient apiClient)
         {
-            await Task.Delay(1000);
             var id = BackgroundJob.Enqueue(() => apiClient.GetDataAsync());
+            return Task.CompletedTask;
         }
     }
 }

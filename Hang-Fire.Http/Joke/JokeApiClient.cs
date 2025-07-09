@@ -14,6 +14,7 @@ namespace Hang_Fire.Http.Joke
 
         public async Task<string> GetDataAsync()
         {
+            await Task.Delay(10000);
             var response = await _httpClient.GetAsync("https://v2.jokeapi.dev/joke/Any");
             response.EnsureSuccessStatusCode();
 

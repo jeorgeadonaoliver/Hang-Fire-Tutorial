@@ -16,7 +16,7 @@ public static class JobRegistrationService
         services.AddTransient<EmailService>();
         services.AddTransient<NotificationService>();
         services.AddTransient<IServiceFactory, ServiceFactory>();
-        services.AddTransient<IApiService, ProcessApiClient>();
+        services.AddTransient<IProcessApiClient, ProcessApiClient>();
 
         return services;
     }
