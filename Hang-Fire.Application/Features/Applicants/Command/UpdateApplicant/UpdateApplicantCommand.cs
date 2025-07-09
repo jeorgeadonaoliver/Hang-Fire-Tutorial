@@ -1,8 +1,11 @@
-﻿namespace Hang_Fire.Application.Features.Applicants.Command.UpdateApplicant
+﻿using FluentResults;
+using Hang_Fire.Application.Interfaces;
+
+namespace Hang_Fire.Application.Features.Applicants.Command.UpdateApplicant
 {
-    public class UpdateApplicantCommand
+    public class UpdateApplicantCommand : IRequest<Result<Guid>>
     {
-        public Guid Id { get; set; } = Guid.NewGuid();
+        public Guid Id { get; set; } 
 
         public string LastName { get; set; } = null!;
 

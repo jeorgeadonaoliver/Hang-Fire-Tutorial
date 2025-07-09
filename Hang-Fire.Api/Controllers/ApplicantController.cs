@@ -1,6 +1,7 @@
 ﻿using FluentResults;
 using Hang_Fire.Api.Common;
 using Hang_Fire.Application.Features.Applicants.Command.CreateApplicant;
+using Hang_Fire.Application.Features.Applicants.Command.UpdateApplicant;
 using Hang_Fire.Application.Features.Applicants.Query.GetApplicant;
 using Hang_Fire.Application.Interfaces;
 using Microsoft.AspNetCore.Mvc;
@@ -31,6 +32,13 @@ namespace Hang_Fire.Api.Controllers
         {
             var result = await _dispatcher.Send(new GetApplicantQuery(), cancellationToken);
             return result.FilterResult(_logger) ?? Ok(result.Value); 
+        }
+
+        [HttpPost("UpdateApplicant")]
+        public async Task<IActionResult> UpdateApplicant([FromBody] UpdateApplicantCommand command, CancellationToken cancellationToken)
+        {
+            var result = await _dispatcher.Send(command, cancellationToken);
+            return result.FilterResult(_logger) ?? Ok(result.Value);
         }
     }
 }

@@ -1,6 +1,4 @@
-﻿using FluentResults;
-
-namespace Hang_Fire.Application.Interfaces
+﻿namespace Hang_Fire.Application.Interfaces
 {
     public interface IService
     {

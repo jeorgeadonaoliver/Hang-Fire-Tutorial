@@ -1,7 +1,7 @@
 ﻿using Hang_Fire.Application.Interfaces;
 using Microsoft.Extensions.Logging;
 
-namespace Hang_Fire.Job;
+namespace Hang_Fire.Service;
 
 public class NotificationService : IService
 {

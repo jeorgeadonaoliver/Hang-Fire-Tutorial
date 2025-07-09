@@ -1,11 +1,6 @@
-﻿using FluentResults;
-using Hang_Fire.Application.Interfaces;
+﻿using Hang_Fire.Application.Interfaces;
 using Hang_Fire.Domain;
 using Hangfire;
-using Hangfire.Annotations;
-using Hangfire.Client;
-using Hangfire.States;
-using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 
 namespace Hang_Fire.Application.Features.BackgroundJobs;

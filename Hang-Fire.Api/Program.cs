@@ -1,7 +1,11 @@
+using Hang_Fire.Api.Controllers;
 using Hang_Fire.Api.Middleware;
 using Hang_Fire.Application;
-using Hang_Fire.Job;
+using Hang_Fire.Application.Interfaces;
+using Hang_Fire.Http;
+using Hang_Fire.Http.Cat;
 using Hang_Fire.Persistence;
+using Hang_Fire.Service;
 using Hangfire;
 using Serilog;
 
@@ -16,6 +20,8 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddHangfireServices(builder.Configuration);
 builder.Services.AddApplicationServices();
 builder.Services.AddPersistenceServices(builder.Configuration);
+builder.Services.AddHttpClientService();
+
 
 builder.Host.UseSerilog();
 

@@ -2,7 +2,7 @@
 using Microsoft.Extensions.Logging;
 
 
-namespace Hang_Fire.Job
+namespace Hang_Fire.Service
 {
     public class EmailService : IService
     {
