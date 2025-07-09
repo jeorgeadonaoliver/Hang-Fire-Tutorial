@@ -1,4 +1,4 @@
-﻿namespace Hang_Fire.Application.Interfaces
+﻿namespace Hang_Fire.Application.Interfaces.backgroundService
 {
     public interface IService
     {

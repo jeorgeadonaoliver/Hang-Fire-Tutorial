@@ -1,6 +1,7 @@
 ﻿using FluentResults;
 using Hang_Fire.Application.Common;
 using Hang_Fire.Application.Interfaces;
+using Hang_Fire.Application.Interfaces.backgroundService;
 using Hang_Fire.Domain;
 
 namespace Hang_Fire.Application.Features.Applicants.Command.UpdateApplicant

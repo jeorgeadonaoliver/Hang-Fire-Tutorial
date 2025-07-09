@@ -1,4 +1,4 @@
-﻿using Hang_Fire.Application.Interfaces;
+﻿using Hang_Fire.Application.Interfaces.backgroundService;
 using Microsoft.Extensions.Logging;
 
 

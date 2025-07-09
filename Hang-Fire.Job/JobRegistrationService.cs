@@ -1,5 +1,4 @@
-﻿using Hang_Fire.Application.Interfaces;
-using Hang_Fire.Application.Interfaces.backgroundService;
+﻿using Hang_Fire.Application.Interfaces.backgroundService;
 using Hang_Fire.Job.ApiClient;
 using Hangfire;
 using Microsoft.Extensions.Configuration;

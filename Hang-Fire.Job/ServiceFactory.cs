@@ -1,4 +1,4 @@
-﻿using Hang_Fire.Application.Interfaces;
+﻿using Hang_Fire.Application.Interfaces.backgroundService;
 using Hang_Fire.Domain;
 using Microsoft.Extensions.DependencyInjection;
 
